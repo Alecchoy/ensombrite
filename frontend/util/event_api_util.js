@@ -10,7 +10,7 @@ export const fetchEvent = id => (
     $.ajax({
         method: 'GET',
         url: `api/events/${id}`,
-        error: (err) => console.log(err)
+        error: (err)
     })
 )
 

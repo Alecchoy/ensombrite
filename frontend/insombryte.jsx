@@ -27,5 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchEvents = fetchEvents;
    
  
-    ReactDOM.render(<Root store={store}/>, root)
+    // ReactDOM.render(<Root store={store}/>, root)
+      ReactDOM.render( <h1>Its working</h1>, root)
 })
