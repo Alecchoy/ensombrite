@@ -2,6 +2,7 @@ import * as EventAPIUtil from '../util/event_api_util';
 
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_EVENT';
+export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 
 export const receiveEvents = events => ({
@@ -12,6 +13,11 @@ export const receiveEvents = events => ({
 export const receiveEvent = ({event}) => ({
     type: RECEIVE_EVENT,
     event
+})
+
+export const receiveErrors = errors => ({
+    type: RECEIVE_ERRORS,
+    errors
 })
 
 
@@ -30,6 +36,7 @@ export const fetchEvent = id => dispatch => (
 
 export const createEvent = event => dispatch => (
     EventAPIUtil.createEvent(event).then(event => (
-        dispatch(receiveEvent(event))
+        dispatch(receiveEvent(event)),
+        err => (dispatch(receiveErrors(err.responseJSON)))
     ))
 )

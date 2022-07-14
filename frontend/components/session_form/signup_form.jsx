@@ -1,7 +1,6 @@
 import React from "react";
-import Kanye from './kanye-west.png'
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -35,6 +34,10 @@ class SessionForm extends React.Component {
             </ul>
         )
     }
+    
+    componentWillUnmount(){
+        this.props.removeSessionErrors()
+    }
 
     render() {
         return (
@@ -43,6 +46,7 @@ class SessionForm extends React.Component {
             Welcome to Insombryte!
             <br />
             {/* Please { this.props.formType} or  */}
+            {this.renderErrors()}
             <div className="login-form">
                 <br />
                 <label className="login-input-label">Email:
@@ -72,4 +76,4 @@ class SessionForm extends React.Component {
     }
 }
 
-export default SessionForm;
+export default SignupForm;

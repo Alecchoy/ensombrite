@@ -14,25 +14,11 @@
  *= require_self
  */
 
- .login-signup {
-    font-size: 20px;
-    padding-top: 20px;
+ 
 
- }
 
- header {
-    display: flex;
-    justify-content: space-between;
- }
-
- .login-input {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    margin-left: 20px;
-    padding-bottom: 20px;
- }
-
- .login-input-label{
-    margin-left: 20px;
- }
+ /* .login-form-image {
+   size: 300px 100px;
+   background-image: image-url('kanye-west');
+   background-repeat: no-repeat;
+ } */
