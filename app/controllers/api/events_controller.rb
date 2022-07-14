@@ -15,10 +15,21 @@ class Api::EventsController < ApplicationController
             render json: @events.errors.full_message, status: 422
         end
     end
+
     
     def index
         @events = Event.all
         render :index 
+    end
+
+
+    def update 
+        @event = Event.find_by(id: params[:id])
+        if @event.update(event_params)
+            render :show
+        else
+            render json: @event.errors.full_messages, status: 406
+        end
     end
 
   

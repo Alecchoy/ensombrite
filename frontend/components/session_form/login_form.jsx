@@ -74,13 +74,20 @@ class LoginForm extends React.Component {
                     <div classname="login-entries">
                         <br />
                         <div className="login-input-label">
+                            <div className="email-input-text">email address</div>
+                            <button className="text-input-border">
+                                
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input"></input>
+                            </button>
                         </div>
                         <br />
-                        <label className="login-input-label">
-                            <div>email address</div>
+                        <div className="login-input-label">
+                        <div className="password-input-text">password</div>
+                        <button className="text-input-border">
+
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
-                        </label>
+                        </button>
+                        </div>
                         <br />
                         <label className="login-input-label">
                             <input className="login-button-input" type="submit" value={this.props.formType} />

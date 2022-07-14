@@ -40,3 +40,7 @@ export const createEvent = event => dispatch => (
         err => (dispatch(receiveErrors(err.responseJSON)))
     ))
 )
+
+export const updateEvent = event => dispatch => {
+    EventAPIUtil.updateEvent(event).then(event => dispatch(receiveEvent(event)))
+}

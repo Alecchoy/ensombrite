@@ -9,8 +9,7 @@ export const fetchEvents = data => (
 export const fetchEvent = id => (
     $.ajax({
         method: 'GET',
-        url: `/api/events/${id}`,
-        error: (err)
+        url: `/api/events/${id}`
     })
 )
 
@@ -22,4 +21,14 @@ export const createEvent = event => (
     
     })
 )
+
+
+export const updateEvent = event => (
+    $.ajax({
+        method: 'PATCH',
+        url: `/api/events/${event.id}`,
+        data: {event}
+    })
+)
+
 
