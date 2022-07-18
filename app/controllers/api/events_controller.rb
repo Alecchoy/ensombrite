@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-    before_action :require_logged_in, only: [:create, :edit, :delete]
+    before_action :require_logged_in, only: [:create, :update, :delete]
     
     
     def show
@@ -24,11 +24,21 @@ class Api::EventsController < ApplicationController
 
 
     def update 
-        @event = Event.find_by(id: params[:id])
+        @event = Event.find(params[:id])
         if @event.update(event_params)
             render :show
         else
             render json: @event.errors.full_messages, status: 406
+        end
+    end
+
+    def destroy 
+        @event = Event.find(params[:id])
+
+        if @event.destroy
+            render :show
+        else
+            render json: @event.errors.full_messages, status: 422
         end
     end
 

@@ -22,7 +22,7 @@ import { RECEIVE_ERRORS } from "../actions/event_actions";
 
 const eventErrorsReducer = ( state = [], action) => {
     Object.freeze(state);
-    console.log("state", state)
+
 
     switch( action.type ){
         case RECEIVE_ERRORS:

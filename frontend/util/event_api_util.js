@@ -31,4 +31,17 @@ export const updateEvent = event => (
     })
 )
 
+export const deleteEvent = (eventId) => (
+    $.ajax({
+        method: 'DELETE',
+        url: `/api/events/${eventId}` 
+    })
+)
 
+export const fetchCreatedEvents = (id) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/users/${id}/events`,
+        data: {id}
+    })
+}

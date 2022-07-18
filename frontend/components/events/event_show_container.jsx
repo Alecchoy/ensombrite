@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import { fetchEvent } from "../../actions/event_actions";
+import { fetchEvent, deleteEvent } from "../../actions/event_actions";
 import EventShow from './event_show';
 
 const mSTP = (state, ownProps) => {
-    console.log('state', state )
+   
     return {
         event: state.entities.events[ownProps.match.params.eventId]
     }
@@ -11,7 +11,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps ) => {
     return {
-        fetchEvent: () => dispatch(fetchEvent(ownProps.match.params.eventId))
+        fetchEvent: () => dispatch(fetchEvent(ownProps.match.params.eventId)),
+        deleteEvent: () => dispatch(deleteEvent(ownProps.match.params.eventId))
     }
 }
 

@@ -10,6 +10,17 @@ class Api::UsersController < ApplicationController
         end
     end
 
+    def events
+        @user = User.find(params[:id])
+
+        if @user
+            render :events, locals: {user: @user}
+        else
+            render json: @user.errors.full_messages, status: 422
+        end
+
+    end
+
     private
 
     def user_params

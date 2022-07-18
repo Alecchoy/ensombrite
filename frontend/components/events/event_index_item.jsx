@@ -13,10 +13,12 @@ class EventIndexItem extends React.Component{
     }
 
     render(){
-        console.log(this.props)
         const { title, description, location, start_date, end_date, start_time, end_time } = this.props.event;
         return (
             <div className="event-index-item" onClick={this.handleClick} >
+                <div className="index-item-image">
+                    img
+                </div>
                 <div className="event-index-info" key={this.props.key}>
                     <span className="index-item-category">Title:</span>
                     <span className="index-item-copy">{title}</span>

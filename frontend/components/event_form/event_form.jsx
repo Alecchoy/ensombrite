@@ -12,7 +12,7 @@ class EventForm extends React.Component {
             start_time: '',
             end_time: '',
             category_id: 1,
-            host_id: 1
+            host_id: this.props.currentUserId
             
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,8 +21,8 @@ class EventForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         // this.props.createEvent({event: this.state}).then(event => this.props.history.push(`/event/${event.id}`));
-        this.props.createEvent(this.state).then(event => this.props.history.push(`/event/${event.id}`));
-
+        this.props.createEvent(this.state)
+        this.props.history.push(`/`)
     }
 
     update(property){
@@ -36,16 +36,49 @@ class EventForm extends React.Component {
 
         <div className="event-detail">
        
-
+            
             <form className="event-form" onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.title} placeholder="title" onChange={this.update("title")} />
-                <input type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} />
-                <input type="text" value={this.state.location} placeholder="location" onChange={this.update("location")} />
-                <input type="date" value={this.state.start_date} placeholder="start_date" onChange={this.update("start_date")} />
-                <input type="date" value={this.state.end_date} placeholder="end_date" onChange={this.update("end_date")} />
-                <input type="time" value={this.state.start_time} placeholder="start_time" onChange={this.update("start_time")} />
-                <input type="time" value={this.state.end_time} placeholder="end_time" onChange={this.update("end_time")} />
-                <div className="button-holder">
+                <div className="event-form-title">
+                    <input type="text" value={this.state.title} placeholder="title" onChange={this.update("title")} className="fill-out-event-form"/>
+                </div>
+                <br />
+                <div className="event-form-location">
+                    <input type="text" value={this.state.location} placeholder="location" onChange={this.update("location")}  className="fill-out-event-form"/>
+                </div>
+                <br />
+                <div className="event-form-title">
+                    <div className="event-form-datetime-box">
+                        <div className="event-form-datetime">
+                            <input type="date" value={this.state.start_date} placeholder="start_date" onChange={this.update("start_date")}  className="fill-out-event-form-datetime"/>
+                        </div>
+                        <div className="event-form-datetime">
+                            <input type="time" value={this.state.start_time} placeholder="start_time" onChange={this.update("start_time")}  className="fill-out-event-form-datetime"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <br />
+                
+                <div className="event-form-title">
+
+                    <div class="event-form-datetime-box">
+
+                        <div className="event-form-datetime">
+                        <input type="date" value={this.state.end_date} placeholder="end_date" onChange={this.update("end_date")}  className="fill-out-event-form-datetime" />
+                        </div>
+
+                        <div className="event-form-datetime">
+                            <input type="time" value={this.state.end_time} placeholder="end_time" onChange={this.update("end_time")}  className="fill-out-event-form-datetime" />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="button-holder"> 
+                <br />
+                <div className="event-form-description">
+                    <input type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} className="fill-out-event-form" />
+                </div>
+                <br />
                     <button className="new-event-button">Create Event</button>
                 </div>
             </form>

@@ -1,0 +1,89 @@
+.index-nav-bar{
+  
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    border: 1px black solid;
+    
+}
+
+.index-nav-bar-list {
+    width: 1425px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+   
+    
+
+}
+
+.header-link {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px black solid;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+}
+
+.header-link-box{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.login-signup{
+    width: 100%;
+    position: sticky;
+    // position: absolute;   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    // justify-content: space-between;
+    // padding: 10px;
+    
+}
+
+.login-signup-buttons {
+    height: 49px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    // top: 10px;
+    border: 1px black solid;
+    // padding: 10px;
+    // margin-bottom: 20px;
+ 
+}
+
+.header-group{
+    display:flex;
+    flex-direction: row;
+}
+#nav-temp-box{
+    border: 1px black solid;
+    padding: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

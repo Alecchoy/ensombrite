@@ -9,22 +9,23 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import EventFormContainer from "./event_form/event_form_container";
 import EventEditFormContainer from "./event_form/event_edit_container";
 import EventShowContainer from "./events/event_show_container";
+import HomePageNavBarContainer from "./navbars/homepage_nav_bar_container";
+import UserCreatedEventsIndexContainer from "./user_events/user_events_index_container";
 const App = () => (
     <div>
         <header>
-            <Link to="/" className="header-link">
-              <h1>Insombryte</h1>
-            </Link>
-         <GreetingContainer />
+            <HomePageNavBarContainer />
             
          {/* <EventFormContainer /> */}
         </header>
-        <Link to="/events/new" className="event-form-link">New Event</Link>
-        {/* <div>
-            <button>
-            <Route exact path="/" component={EventFormContainer} />
-            </button>
-        </div> */}
+         {/* <GreetingContainer /> */}
+        {/* <Link to="/events/new" className="event-form-link">New Event</Link> */}
+        {/* <Link to={`/users/${this.props.user.id}/events`}>User Events</Link> */}
+        {/* <div> */}
+            {/* <button> */}
+            {/* <Route exact path="/" component={EventFormContainer} /> */}
+            {/* </button> */}
+        {/* </div> */}
  
     <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
@@ -32,7 +33,8 @@ const App = () => (
         <ProtectedRoute path="/events/new" component={EventFormContainer} />
         <Route exact path="/" component={EventIndexContainer} />
         <Route path="/events/:eventId/edit" component={EventEditFormContainer} />
-        <Route path="/events/:eventId" component={EventShowContainer} />
+        <ProtectedRoute path="/events/:eventId" component={EventShowContainer} />
+        <ProtectedRoute path="/users/:userid/events" component={UserCreatedEventsIndexContainer} />
     </Switch>
     </div>
 )

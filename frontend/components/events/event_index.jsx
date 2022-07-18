@@ -15,10 +15,26 @@ class EventIndex extends React.Component {
     render(){
         return(
             <div>
+            <section className="index-image">
+                <img src="" alt="" />
+                 
+            </section>
+            <section className="popular">
+                    POPULAR
+            </section>
+            <section className="popular">
+                    CATEGORIES 
+            </section>
                 <h1>Events</h1>
-                {this.props.events.map(event => (
-                    <EventIndexItem event={event} key={event.id}/>
-                ))}
+                <div className="all-events">
+              
+                    {this.props.events.map(event => (
+                        
+                            <EventIndexItem event={event} key={event.id}/>
+            
+                    ))}
+
+                </div>
             </div>
         )
     }

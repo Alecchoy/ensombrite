@@ -1,0 +1,70 @@
+.all-events {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.event-index-item {
+    width: 310px;
+    height: 460px;
+    border: black 1px solid;
+    margin-bottom: 20px;
+}
+
+.index-item-image {
+    width: 310px;
+    height: 310px;
+    border: black 1px solid;
+
+}
+
+.index-image{
+    width: 2005px;
+    height: 576.52px;
+    border: blue 1px solid;
+    justify-content: center;
+    display: flex;
+}
+
+
+// USER EVENT INDEX
+.displayed-events{
+    display: flex;
+    justify-content: center;
+   
+}
+.displayed-events ul{
+    display: flex;
+    flex-direction: column;
+    width: 1256px;
+}
+
+.user-events-index-image{
+    width: 2005px;
+    height: 576.52px;
+    border: blue 1px solid;
+}
+
+.user-event-index-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: red 1px solid;
+    width: 1272px;
+    height: 88px;
+    margin-bottom: 15px;
+}
+.user-event-index-item-edits{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popular {
+    height: 92px;
+    border: 1px green solid;
+    display: flex;
+}
+
+
+
+

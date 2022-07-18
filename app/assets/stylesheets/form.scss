@@ -1,0 +1,58 @@
+.fill-out-event-form{
+    width: 640px;
+    height: 50px;
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.fill-out-event-form-datetime{
+    width: 312px;
+    height: 50px;
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.event-form-datetime-box{
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+    height: 50px;
+
+}
+
+.event-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.event-form-title{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.event-form-description{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.event-form-location{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.event-form-datetime{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
