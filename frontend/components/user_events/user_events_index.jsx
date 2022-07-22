@@ -45,9 +45,7 @@ class UserCreatedEventIndex extends React.Component{
             <div>
                 <HomePageNavBarContainer />
                 <h1>Events Created</h1>
-                <section className="user-events-index-image">
-                    <img src="" alt="" />
-                </section>
+               
                 {displayedEvents}
             </div>
         )

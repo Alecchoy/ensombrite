@@ -28,16 +28,17 @@ class UserCreatedEventIndexItem extends React.Component{
             <div className="user-event-index-item">
             
                     <div className="user-event-date">
-                        {/* <span>{event.start_date}</span>
-                        <span>{event.start_time}</span> */}
-                        <h1>hi</h1>
+                        {new Date(event.start_date).toDateString().split(" ")[1]}
+                        { new Date(event.start_date).toDateString().split(" ")[2]}
+                
                     </div>
-                    <div className="user-event-pic">YO
+                    <div className="user-event-pic">
+                    <img src={this.props.event.photo} alt="background-pic" />
                     </div>
                     <div className="user-event-info">
                         <div className="user-event-info-time">
                             <span>{event.title}</span>
-                            <span>{event.start_time}</span>
+                            <span>{ new Date(this.props.event.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)}</span>
                         </div>
                     </div>
                

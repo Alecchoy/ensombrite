@@ -36,6 +36,7 @@ class Api::EventsController < ApplicationController
 
     def update 
         @event = Event.find(params[:id])
+        @host = @event.host
         if @event.update(event_params)
             render :show
         else

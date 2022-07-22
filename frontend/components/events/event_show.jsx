@@ -35,7 +35,7 @@ class EventShow extends React.Component{
                 <div className="show-page">
                 
                     <div className="show-page-image">
-                        <img src={this.props.event.photo} alt="lol" className="showpage-blur" />
+                        <img src={this.props.event.photo} alt="back-ground-pic" className="showpage-blur" />
                     </div> 
                    
                     <div className="show-page-info">

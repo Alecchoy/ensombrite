@@ -37,7 +37,7 @@ class EventForm extends React.Component {
         formData.append('event[end_date]', this.state.end_date);
         formData.append('event[end_time]', this.state.end_time);
         formData.append('event[category]', this.state.category);
-        formData.append('event[host_id', this.state.host_id );
+        formData.append('event[host_id]', this.state.host_id );
         if (this.state.imageFile){
             formData.append('event[photo]', this.state.imageFile);
         }
@@ -78,7 +78,9 @@ class EventForm extends React.Component {
 
         <div className="event-detail">
                 <HomePageNavBarContainer />
-       
+            <div className="custom1"></div>
+            <div className="custom2"></div>
+            <div className="custom3"></div>
             
             <form className="event-form" onSubmit={this.handleSubmit}>
                 <div className="event-form-title">
@@ -106,9 +108,7 @@ class EventForm extends React.Component {
                 </div>
                 <br />
 
-                <div className="event-location-big">
-                    Date and Time
-                </div>
+                <div className="event-location-big" id="basic-title">Date and Time</div>
                 <div className="how-to-date">Tell event-goers when your event starts and ends so they can make plans to attend. </div>
                 <div className="event-form-dates-boxes">
                     <div className="event-form-datetime-box">
@@ -136,7 +136,9 @@ class EventForm extends React.Component {
                     <div className="how-to-image">This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</div>
                     <div className="img-preview">
                             <div className="insert-here">[insert image here] </div>
-                            {previewImg}
+                            <div className="actual-preview"> 
+                                {previewImg}
+                                </div>
                         
                     </div>
                     <br />
@@ -146,12 +148,17 @@ class EventForm extends React.Component {
                 </div>
                 <br />
                 <div className="button-holder"> 
-                <br />
-                <div className="event-form-description">
-                    <input type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} className="fill-out-event-form" />
+                <div className="description-section">
+                    <div className="description-titler">Description</div>
+                    <div className="how-to-describe">
+                    Add more details to your event like your schedule, sponsors, or featured guests.
+                    </div>
+                    <div className="event-form-description">
+                        <textarea type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} className="fill-out-event-form-2" />
+                    </div>    
                 </div>
-                <br />
-                    <button className="new-event-button">Create Event</button>
+                
+                    <button  className="submit-form">Save</button>
                 </div>
             </form>
         </div>

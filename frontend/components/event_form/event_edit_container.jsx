@@ -2,11 +2,9 @@ import { fetchEvent, updateEvent } from "../../actions/event_actions";
 import { connect } from "react-redux";
 import EditEventForm from "./event_edit_form";
 
-const mSTP = (state, ownProps) => {
+const mSTP = (state) => {
  
     return {
-        event: state.entities.events[ownProps.match.params.eventId],
-        formType: "Update Event",
         currentUserId: state.session.id
     }
 }
