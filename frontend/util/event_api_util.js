@@ -17,7 +17,7 @@ export const createEvent = event => (
     $.ajax({
         method: 'POST',
         url: '/api/events',
-        data: {event}
+        data: {event},
     
     })
 )
@@ -38,10 +38,11 @@ export const deleteEvent = (eventId) => (
     })
 )
 
-export const fetchCreatedEvents = (id) => {
+export const fetchCreatedEvents = (userId) => {
     return $.ajax({
         method: 'GET',
-        url: `/api/users/${id}/events`,
-        data: {id}
+        url: `/api/users/${userId}/events`
+    
     })
 }
+

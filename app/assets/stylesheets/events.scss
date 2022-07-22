@@ -2,3 +2,229 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.show-page{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.show-page-image{
+    height: 500px;
+    // border: black 1px solid;
+    overflow: hidden;
+ 
+    
+    // border: 1px solid green 
+}
+.showpage-blur{
+    filter: blur(2.75rem);
+    margin-top: -400px;
+    margin-left: -250px;
+    height: 900px;
+    width: 2000px;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    position: absolute;
+}
+
+.show-page-info{
+   width: 1080px;
+   background-color: white; 
+//    height: 400px;
+   display: flex;
+   position: absolute;
+   z-index: 1;
+//    border: 1px black solid;
+   margin-top: -463px;
+   margin-left: 175px;
+   flex-direction: column;
+   border-radius: 3px;
+}
+.showpage-inner-image{
+    width: 720px;
+    height: 360px;
+    border-top-left-radius: 3px;
+}
+.register-and-like{
+    height: 45px;
+    padding: 10px;
+    // border: black 1px solid;
+    background-color: white;
+    display: flex;
+    border-bottom: 1px solid rgb(220, 216, 216);
+
+    // justify-content: space-between;
+}
+
+.ticket-button{
+    width: 308px;
+    height: 44px;
+    background-color: #22ca7c;
+    display: flex;
+    position: absolute;
+    margin-left: 730px;
+    border-radius: 3px;
+    // justify-content: flex-end;
+
+}
+
+.show-page-top{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.showpage-top-right{
+    // border: 1px black solid;
+    width: 360px;
+    background-color: rgba(228, 224, 224, 0.816);
+    border-bottom: 1px solid rgb(220, 216, 216);
+    border-top-right-radius: 3px;
+}
+
+.show-page-bottom{
+    display: flex;
+    flex-direction: row;
+    width: 1080px;
+    margin-top: -20px;
+  
+}
+.show-page-bottom-left{
+    width: 720px;
+    // border: 1px solid black;
+    font-size: 20px;
+   
+}
+
+.show-month{
+    padding-top: 29px;
+    width: 40px;
+    height: 50px;
+    margin-left: 26px;
+    // border: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.show-title{
+    // border: 1px solid black;
+    font-size: 24px;
+    padding: 20px;
+    font-weight: 400;
+}
+.show-host{
+    // border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+ 
+}
+
+.host-name{
+    color: #244FBD;
+    margin-left: 25px;
+    margin-top: -18.5px;
+}
+
+
+.show-page-descrip{
+    padding-left: 100px;
+    padding-right: 70px;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 40px;
+    padding-bottom: 90px;
+    
+}
+
+#show-date-logo{
+    // border: 1px black solid;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.show-date-text{
+    // border: 1px black solid;
+    display: flex;
+    margin-left: 48px;
+    margin-top: -30px;
+    font-weight: 500;
+    
+}
+
+.date-text{
+    margin-left: -100px;
+    margin-top: 35px;
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+#show-loc-logo{
+    // border: 1px black solid;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.show-loc-text{
+    // border: 1px black solid;
+    display: flex;
+    margin-left: 48px;
+    margin-top: -30px;
+    font-weight: 500;
+    
+}
+
+.show-about{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#show-refund-logo{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 8px;
+    font-size: 14px;
+
+}
+
+.show-refund-policy{
+    display: flex;
+    margin-left: 48px;
+    margin-top: -30px;
+    font-weight: 500;
+
+}
+
+.event-text{
+      margin-left: -62px;
+    margin-top: 35px;
+    font-size: .8rem;
+    font-weight: 200;
+    
+}
+.refund-text{
+    font-weight: 200;
+    font-size: .8rem;
+    margin-top: 35px;
+    margin-left: -98px;
+}

@@ -4,22 +4,33 @@ class Api::EventsController < ApplicationController
     
     def show
         @event = Event.find_by(id: params[:id])
+        @host = @event.host
+        
+   
+        render :show
     end
 
     def create
     
         @event = Event.create(event_params)
         if @event.save 
-            render "api/events/show"
+            render :index
         else
-            render json: @events.errors.full_message, status: 422
+            render json: @event.errors.full_messages, status: 422
         end
     end
 
     
     def index
-        @events = Event.all
-        render :index 
+
+        if params[:user_id]
+            @events = Event.where(host_id: params[:user_id])
+        # elsif params[:category]
+        #     @events = Event.where(category)
+        else
+            @events = Event.all 
+        end 
+        render :index
     end
 
 
@@ -34,7 +45,7 @@ class Api::EventsController < ApplicationController
 
     def destroy 
         @event = Event.find(params[:id])
-
+        @host = @event.host
         if @event.destroy
             render :show
         else
@@ -47,6 +58,6 @@ class Api::EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:title, :description, :location, :host_id, :category_id, :start_date, :end_date, :start_time, :end_time)
+        params.require(:event).permit(:title, :user_id, :description, :location, :host_id, :category, :start_date, :end_date, :start_time, :end_time, :photo)
     end
 end

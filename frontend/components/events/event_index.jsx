@@ -1,5 +1,8 @@
 import React from "react";
+import HomePageNavBar from "../navbars/homepage_nav_bar";
 import EventIndexItem from "./event_index_item";
+import GreetingContainer from "../greeting/greeting_container";
+import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
 
 
 
@@ -15,17 +18,24 @@ class EventIndex extends React.Component {
     render(){
         return(
             <div>
-            <section className="index-image">
-                <img src="" alt="" />
+                <HomePageNavBarContainer />
+            <div className="index-image">
+               
+            <div className="title-display"> 
+                        <p className="the-the">THE</p>
+                        <p className="moment-moment">MOMENT</p>
+                        <p className="has-has">HAS</p>
+                        <p className="come-come">COME</p>
+
+                    </div>
                  
-            </section>
+            </div>
             <section className="popular">
-                    POPULAR
+                    <div className="categories">
+                       <h1>sd</h1>
+                    </div>
             </section>
-            <section className="popular">
-                    CATEGORIES 
-            </section>
-                <h1>Events</h1>
+               
                 <div className="all-events">
               
                     {this.props.events.map(event => (

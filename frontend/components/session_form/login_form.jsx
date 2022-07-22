@@ -1,6 +1,7 @@
 import React from "react";
 import Kanye from './kanye-west-peppa-pig.png'
-
+// import GreetingContainer from "./greeting/greeting_container";
+// import HomePageNavBarContainer from "./navbars/homepage_nav_bar_container";
 
 
 class LoginForm extends React.Component {
@@ -58,6 +59,7 @@ class LoginForm extends React.Component {
 
     render() {
         return (
+           
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             {/* Please { this.props.formType} or  */}

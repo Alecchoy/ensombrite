@@ -11,7 +11,7 @@ export const receiveEvents = events => ({
     events 
 })
 
-export const receiveEvent = ({event}) => ({
+export const receiveEvent = (event) => ({
     type: RECEIVE_EVENT,
     event
 })
@@ -20,6 +20,7 @@ export const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
     errors
 })
+
 
 export const removeEvent = (eventId) => ({
     type: REMOVE_EVENT,
@@ -40,6 +41,7 @@ export const fetchEvent = id => dispatch => (
     ))
 )
 
+
 export const createEvent = event => dispatch => (
     EventAPIUtil.createEvent(event).then(event => (
         dispatch(receiveEvent(event)),
@@ -53,7 +55,7 @@ export const updateEvent = event => dispatch => {
 }
 
 export const deleteEvent = (eventId) => dispatch => {
-    EventAPIUtil.deleteEvent(eventId).then(() => dispatch(removeEvent(eventId)))
+    EventAPIUtil.deleteEvent(eventId).then((event) => {console.log('event!!!', event);  dispatch(removeEvent(event.id));})
 }
 
 export const fetchCreatedEvents = userId => dispatch => {

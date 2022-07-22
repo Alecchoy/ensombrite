@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
+
 class EventIndexItem extends React.Component{
     constructor(props){
         super(props)
@@ -17,34 +18,39 @@ class EventIndexItem extends React.Component{
         return (
             <div className="event-index-item" onClick={this.handleClick} >
                 <div className="index-item-image">
-                    img
+                    <img src={this.props.event.photo} alt="" className="index-photo"/>
                 </div>
                 <div className="event-index-info" key={this.props.key}>
-                    <span className="index-item-category">Title:</span>
-                    <span className="index-item-copy">{title}</span>
+                    {/* <span className="index-item-category">Title:</span> */}
+                    <div className="event-index-title-box">
+                    <span className="index-item-copy" id="index-title">{title}</span>
+                    </div>
+                    {/* <span className="index-item-category">Description:</span> */}
+                    {/* <span className="index-item-copy">{description}</span> */}
+                
+                    {/* <span className="index-item-category">Location:</span> */}
+                
+                    {/* <span className="index-item-category">Start Date:</span> */}
+                    <span className="index-item-copy" id="index-startdate">{start_date}{start_time}</span>
+                  
                     <br />
-                    <span className="index-item-category">Description:</span>
-                    <span className="index-item-copy">{description}</span>
+                    <span className="index-item-copy" id="index-location">{location}</span>
+                    {/* <span className="index-item-category">Start Time:</span> */}
+                    {/* <span className="index-item-copy" id="index-starttime">{start_time}</span> */}
                     <br />
-                    <span className="index-item-category">Location:</span>
-                    <span className="index-item-copy">{location}</span>
                     <br />
-                    <span className="index-item-category">Start Date:</span>
-                    <span className="index-item-copy">{start_date}</span>
-                    <br />
-                    <span className="index-item-category">End Date:</span>
-                    <span className="index-item-copy">{end_date}</span>
-                    <br />
-                    <span className="index-item-category">Start Time:</span>
-                    <span className="index-item-copy">{start_time}</span>
-                    <br />
-                    <span className="index-item-category">End Time:</span>
-                    <span className="index-item-copy">{end_time}</span>
                     <br />
                     <br />
                     <br />
                     <br />
                 </div>
+                
+                  <div>
+                    <i className="fa-solid fa-heart" id="like-button"></i>
+                    {/* <span class="material-symbols-outlined" id="like-circle">circle</span> */}
+                    <i className="fa-solid fa-circle" id="like-circle"></i>
+
+                  </div>
             </div>
         )
     }

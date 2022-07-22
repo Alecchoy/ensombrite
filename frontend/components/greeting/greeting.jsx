@@ -19,25 +19,56 @@ const Greeting = ({ currentUser, logout }) => {
         <div className= "header-group">
             
              {/* <Link to={`/users/${this.props.session.id}/events`}>User Events</Link> */}
-             <div id="nav-temp-box">
-                <Link to="/events/new" className="event-form-link">New Event</Link>
-             </div>
-            <div  id="nav-temp-box">
-                <h1>Likes</h1>
+            
+                <Link to="/events/new" className="event-form-link">
+                    <div className="create-button">   
+                            <span className="material-symbols-outlined" id="plus-sign">
+                            add
+                            </span>
+                        <div className="create-text">Create an event</div>
+                    </div>
+                </Link>
+        
+            <div  id="favorite-box">
+                <span className="material-symbols-outlined" id="like-sign">
+                    favorite
+                </span>
+                <div className="nav-text">Likes</div>
             </div>
-            <div id="nav-temp-box">
-                <h1>Tickets</h1>
-            </div>
+                <div id="tickets-box">
+
+            <Link to={`/users/${currentUser.id}/registrations`}>
+                    <span className="material-symbols-outlined" id="ticket-sign">
+                        book_online
+                    </span>
+                    <div className="nav-text">Tickets</div>
+            </Link>
+                </div>
+
+
             <div className="dropdown">
-                <div className="header-name" id="nav-temp-box">
-                    <span>{currentUser.email}</span>
+                <div className="header-name" >
+                    <div className="account-circle-padding">
+                        <span className="material-symbols-outlined" id="account-circle">
+                            account_circle
+                        </span>
+                    </div>
+                    <div className="user-email">{currentUser.email}</div>
+                    <span className="material-symbols-outlined" id="down-arrow">
+                        expand_more
+                    </span>
                 </div>
                
-                <div className="dropdown-content" id="nav-temp-box">
-                    <Link to={`/users/${currentUser.id}/events`}><p>Manage Your Event</p></Link>
-                    <p><button  className="header-button" id="nav-temp-box" onClick={logout}>Log Out</button></p>
-                    <p>Yo</p>
+
+
+                <div className="dropdown-content">
+                    <Link to={`/users/${currentUser.id}/events`}><p id="dropdown-options">Manage Your Event</p></Link>
+                    <p><button  className="header-button" id="dropdown-logout" onClick={logout}>Log Out</button></p>
+
                 </div>
+
+
+                
             </div>
         </div>
     );

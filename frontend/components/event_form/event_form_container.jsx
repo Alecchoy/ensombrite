@@ -11,7 +11,7 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => ({
-    createEvent: event => dispatch(createEvent(event))
+    createEvent: (event) => dispatch(createEvent(event))
 })
 
 export default connect(mSTP, mDTP)(EventForm);

@@ -1,4 +1,7 @@
 import React from "react";
+// import HomePageNavBarContainer from "./navbars/homepage_nav_bar_container";
+import GreetingContainer from "../greeting/greeting_container";
+import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
 
 
 
@@ -14,7 +17,7 @@ class EditEventForm extends React.Component {
             end_date: '',
             start_time: '',
             end_time: '',
-            category_id: 1,
+            category: '',
             host_id: this.props.match.params.currentUserId,
             id: this.props.match.params.eventId
         };
@@ -45,9 +48,12 @@ class EditEventForm extends React.Component {
 
         return (
             <div>
-
+                  <div>
+                    <HomePageNavBarContainer />
+                    </div>
             <form className="event-form" onSubmit={this.handleSubmit}>
                 <input type="text" value={this.state.title} placeholder="title" onChange={this.update("title")} />
+                <input type="date" value={this.state.category} placeholder="category" onChange={this.update("category")} />
                 <input type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} />
                 <input type="text" value={this.state.location} placeholder="location" onChange={this.update("location")} />
                 <input type="date" value={this.state.start_date} placeholder="start_date" onChange={this.update("start_date")} />

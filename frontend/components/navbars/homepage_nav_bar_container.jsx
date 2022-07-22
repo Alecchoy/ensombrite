@@ -13,4 +13,4 @@ const mDTP = (dispatch) => ({
     createEvent: event => dispatch(createEvent(event))
 })
 
-export default connect (mSTP, mDTP)(HomePageNavBar)
+export default connect(mSTP, mDTP)(HomePageNavBar)

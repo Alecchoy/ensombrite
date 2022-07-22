@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_18_073434) do
+ActiveRecord::Schema.define(version: 2022_07_20_210209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2022_07_18_073434) do
 
   create_table "events", force: :cascade do |t|
     t.integer "host_id", null: false
-    t.integer "category_id", null: false
     t.string "title", null: false
     t.text "description", null: false
     t.string "location", null: false
@@ -55,9 +54,20 @@ ActiveRecord::Schema.define(version: 2022_07_18_073434) do
     t.time "end_time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_events_on_category_id"
+    t.string "category", null: false
+    t.index ["category"], name: "index_events_on_category"
     t.index ["host_id"], name: "index_events_on_host_id"
     t.index ["title"], name: "index_events_on_title"
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_registrations_on_event_id"
+    t.index ["user_id", "event_id"], name: "index_registrations_on_user_id_and_event_id", unique: true
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

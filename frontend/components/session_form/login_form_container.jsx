@@ -16,7 +16,7 @@ const mSTP = ({ errors}) => {
 const mDTP = dispatch => {
     return {
         processForm: (user) => dispatch(login(user)),
-        demo: () => dispatch(login({email: "cowcow", password: "cowcow" })),
+        demo: () => dispatch(login({email: "demo@user.com", password: "demouser" })),
         removeSessionErrors: () => dispatch(removeSessionErrors())
     }
 }

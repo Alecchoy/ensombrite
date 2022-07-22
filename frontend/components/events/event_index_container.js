@@ -9,6 +9,7 @@ const mSTP = state => ({
 
 const mDTP = dispatch => ({
     fetchEvents: (events) => dispatch(fetchEvents(events))
+    
 })
 
 export default connect( mSTP, mDTP)(EventIndex)

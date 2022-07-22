@@ -3,9 +3,10 @@ import { logout } from "../../actions/session_actions";
 import Greeting from "./greeting";
 
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = ({ session, entities: { users, registrations } }) => {
     return {
-        currentUser: users[session.id]
+        currentUser: users[session.id],
+        registrations: registrations[session.id]
     }
 };
 
