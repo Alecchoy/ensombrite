@@ -82,18 +82,35 @@ class EventForm extends React.Component {
             
             <form className="event-form" onSubmit={this.handleSubmit}>
                 <div className="event-form-title">
-                    <input type="text" value={this.state.title} placeholder="title" onChange={this.update("title")} className="fill-out-event-form"/>
+                     <div id="basic-title" className="basic-info">Basic Info</div> 
+                     <div className="how-to-info">
+                        Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.
+                     </div>
+                    <br />
+                    <div className="event-form-category">
+                        <div id="tit">
+                        <input type="text" value={this.state.title} placeholder="title" onChange={this.update("title")} className="fill-out-event-form-1"/>
+                        </div>
+                        <div id="cat">
+                            <input type="text" value={this.state.category} placeholder="category" onChange={this.update("category")}  className="fill-out-event-form-1" />
+                        </div>
+                    </div>
                 </div>
                 <br />
                 <div className="event-form-location">
-                    <input type="text" value={this.state.location} placeholder="location" onChange={this.update("location")}  className="fill-out-event-form"/>
-                </div>
-                <div className="event-form-photo">
-                    <input type="file" onChange={this.handleFile.bind(this)}/>
-                    {previewImg}
+                    <div id="basic-title" className="basic-location">Location</div>
+                    <div className="how-to-location">
+                    Help people in the area discover your event and let attendees know where to show up.
+                    </div>
+                    <input type="text" value={this.state.location} placeholder="location" onChange={this.update("location")}  id="location-box" className="fill-out-event-form"/>
                 </div>
                 <br />
-                <div className="event-form-title">
+
+                <div className="event-location-big">
+                    Date and Time
+                </div>
+                <div className="how-to-date">Tell event-goers when your event starts and ends so they can make plans to attend. </div>
+                <div className="event-form-dates-boxes">
                     <div className="event-form-datetime-box">
                         <div className="event-form-datetime">
                             <input type="date" value={this.state.start_date} placeholder="start_date" onChange={this.update("start_date")}  className="fill-out-event-form-datetime"/>
@@ -102,18 +119,7 @@ class EventForm extends React.Component {
                             <input type="time" value={this.state.start_time} placeholder="start_time" onChange={this.update("start_time")}  className="fill-out-event-form-datetime"/>
                         </div>
                     </div>
-                </div>
-                
-                <br />
-                <div className="event-form-datetime">
-                        <input type="text" value={this.state.category} placeholder="category" onChange={this.update("category")}  className="fill-out-event-form-datetime" />
-                        </div>
-
-                
-                <div className="event-form-title">
-
                     <div className="event-form-datetime-box">
-
                         <div className="event-form-datetime">
                         <input type="date" value={this.state.end_date} placeholder="end_date" onChange={this.update("end_date")}  className="fill-out-event-form-datetime" />
                         </div>
@@ -123,7 +129,22 @@ class EventForm extends React.Component {
                         </div>
                     </div>
                 </div>
+           
 
+                <div className="event-form-photo">
+                    <div className="image-big">Main Event Image</div>
+                    <div className="how-to-image">This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</div>
+                    <div className="img-preview">
+                            <div className="insert-here">[insert image here] </div>
+                            {previewImg}
+                        
+                    </div>
+                    <br />
+                    <div>
+                    <input type="file" onChange={this.handleFile.bind(this)}/>
+                    </div>
+                </div>
+                <br />
                 <div className="button-holder"> 
                 <br />
                 <div className="event-form-description">

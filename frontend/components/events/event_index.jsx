@@ -3,6 +3,7 @@ import HomePageNavBar from "../navbars/homepage_nav_bar";
 import EventIndexItem from "./event_index_item";
 import GreetingContainer from "../greeting/greeting_container";
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
+import { Link  } from 'react-router-dom';
 
 
 
@@ -22,12 +23,16 @@ class EventIndex extends React.Component {
             <div className="index-image">
                
             <div className="title-display"> 
-                        <p className="the-the">THE</p>
-                        <p className="moment-moment">MOMENT</p>
-                        <p className="has-has">HAS</p>
-                        <p className="come-come">COME</p>
+                        <p id="each-word" className="the-the">THE</p>
+                        <p id="each-word" className="moment-moment">MOMENT</p>
+                        <p id="each-word" className="has-has">HAS</p>
+                        <p id="each-word" className="come-come">COME</p>
+                        <p id="each-word" className="exclaim">!</p>
+                        <p id="each-word" className="dash">-</p>
+                        <p id="each-word" className="dash2">-</p>
 
-                    </div>
+            </div>
+            <p><Link to={'/events/new'}><div className="picture-button"> Create an Event </div></Link></p>
                  
             </div>
             <section className="popular">
