@@ -2,20 +2,23 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding: 20px;
+
     
 }
 
 .event-index-item {
     width: 310px;
     height: 490px;
-    border: rgb(228, 217, 217) 1px solid;
+    border: 1px solid #EFF2FD;
     margin-bottom: 40px;
+    border-radius: 3px;
+    box-shadow: 0 0 11px #d4d8df;; 
 
     
 }
 .event-index-item:hover{
-    box-shadow: 0 0 11px #a5bfff;; 
+    box-shadow: 0 0 11px #66c4ff;
 }
 
 .index-item-image {
@@ -23,6 +26,8 @@
     height: 310px;
     overflow-x: hidden;
     position: relative;
+    border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
  
 
     // border: black 1px solid;
@@ -47,9 +52,23 @@ background-position: 0px -220px;
 
 
 // USER EVENT INDEX
+.users-title{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    position: absolute;
+    margin-left: 95px;
+    margin-top: 40px;
+    letter-spacing: 3px;
+}
 .displayed-events{
     display: flex;
     justify-content: center;
+    margin-top: 210px;
+    font-family: 'Roboto', sans-serif;
+    
+    
    
 }
 .displayed-events ul{
@@ -68,10 +87,13 @@ background-position: 0px -220px;
     display: flex;
     flex-direction: row;
     // justify-content: space-between;
-    border: red 1px solid;
+    // border: red 1px solid;
     width: 1272px;
     height: 88px;
     margin-bottom: 15px;
+    border: 1px solid #EFF2FD;
+    box-shadow: 0 0 5px #d4d8df;; 
+   
 }
 .user-event-index-item-edits{
     display: flex;
@@ -79,7 +101,7 @@ background-position: 0px -220px;
     flex-direction: column;
 }
 .user-event-date{
-    border: 1px brown solid;
+    // border: 1px brown solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,10 +116,12 @@ background-position: 0px -220px;
 }
 
 .user-event-info-time{
+    width: 280px;
+    height: 88px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    border: 1px black solid;
+    // border: 1px black solid;
     padding: 5px;
     margin-left: 5px;
     
@@ -105,7 +129,7 @@ background-position: 0px -220px;
 .user-event-pic{
     height: 56px;
     width: 56px;
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     margin-top: 15px;
     margin-left: 5px;
@@ -114,8 +138,37 @@ background-position: 0px -220px;
 
 .popular {
     height: 92px;
-    border: 1px green solid;
+    // border: 1px green solid;
     display: flex;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    width: 1440px;
+    padding-bottom: 60px;
+}
+.pop{
+    display: flex;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 60px
+}
+
+#down-arrow1{
+    font-size: 50px;
+    margin-top: 50px;
+    color:#1454f6;
+}
+.usa{
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    margin-left: 250px;
+    margin-top: 60px;
+    color:#1454f6;
+}
+.arr{
+    display: flex;
+    position: absolute;
+    margin-left: 200px;
 }
 
 #like-button{
@@ -299,3 +352,66 @@ background-position: 0px -220px;
     background:#1454f6;
 }
 
+#edit-bootoon{
+    border: 2px solid rgb(201, 197, 197);
+   
+    font-size: 20px;
+    // padding: 10px;
+    display: flex;
+    position: absolute;
+    margin-top: -65px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 600px;
+    border-radius: 50px;
+    color: rgb(201, 197, 197);
+}
+#edit-bootoon:hover{
+    color: rgb(2, 206, 100);
+    border-color: rgb(2, 206, 100);
+}
+
+#delete-bootoon{
+    border: 2px solid rgb(201, 197, 197);
+    font-size: 20px;
+    // padding: 10px;
+    display: flex;
+    position: absolute;
+    margin-top: -65px;
+   
+    margin-left: 680px;
+    border-radius: 50px;
+    color: rgb(201, 197, 197);
+}
+
+#delete-bootoon:hover{
+    color: rgb(220, 0, 0);
+    border-color: rgb(220, 0, 0);
+}
+
+.title-box{
+    display: flex;
+    position: absolute;
+    width: 1272px;
+    height: 44px;
+    border: 1px solid #9899a179;
+    box-shadow: 0 0 5px #d4d8df;
+    background:#1454f6;
+    margin-top: 150px;
+    margin-left: 91px;
+    border-radius: 3px;
+    
+
+}
+.event-list{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600px;
+    font-size: 25px;
+    display: flex;
+    position: absolute;
+    margin-left: 50px;
+    // align-items: center;
+    margin-top: 7px;
+    border-bottom: white 1px solid
+}

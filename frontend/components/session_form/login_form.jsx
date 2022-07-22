@@ -1,5 +1,5 @@
 import React from "react";
-import Kanye from './kanye-west-peppa-pig.png'
+// import Kanye from './kanye-west-peppa-pig.png'
 // import GreetingContainer from "./greeting/greeting_container";
 // import HomePageNavBarContainer from "./navbars/homepage_nav_bar_container";
 
@@ -66,9 +66,7 @@ class LoginForm extends React.Component {
             {this.renderErrors()}
             <div className="login-page">
                 <div className="login-form">
-                    <div className="login-site-name">
-                        ensombryte
-                    </div>
+                    <div className="login-site-name">ensombrite</div>
                     <br />
                     <div className="log-in-log-in">
                         Log in
@@ -109,9 +107,9 @@ class LoginForm extends React.Component {
                     </div>
                 </div>
                
-                    <img className="login-form-image" src={Kanye}></img> 
             </div>
           </form>
+                    <img className="login-form-image" src={window.Kanye}></img> 
         </div>
 
         )

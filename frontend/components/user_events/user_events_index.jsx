@@ -44,7 +44,8 @@ class UserCreatedEventIndex extends React.Component{
         return (
             <div>
                 <HomePageNavBarContainer />
-                <h1>Events Created</h1>
+                <div className="users-title">Events</div>
+                <div className="title-box"><div class="event-list"></div></div>
                
                 {displayedEvents}
             </div>

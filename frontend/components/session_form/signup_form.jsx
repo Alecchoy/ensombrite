@@ -43,11 +43,18 @@ class SignupForm extends React.Component {
         return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            Welcome to Insombryte!
+            {this.renderErrors()}
+          <div className="signup-site-name1">
+                        ensombrite
+                    </div>
+                    <div className="ensombriter">ensombrite</div>
+                    <br />
+                    <div className="sign-up-sign-up">
+                        Sign up
+                    </div>
             <br />
             {/* Please { this.props.formType} or  */}
-            {this.renderErrors()}
-            <div className="login-form">
+            <div className="signup-form">
                 <br />
                 <label className="login-input-label">
                     <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" />
@@ -65,12 +72,22 @@ class SignupForm extends React.Component {
                     <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
                 </label>
                 <br />
-                <input className="session-submit" type="submit" value={this.props.formType} />
+                <label ></label>
+                <input className="login-button-input" type="submit" value={this.props.formType} />
                 <br />
-          { this.props.navLink}
+                <div className="login-from-signup">
+                    <div className="signup-from-login-link">
+                    { this.props.navLink}
+                    </div>
+                </div>
+                <img className="login-form-image2" src={window.festivala}></img>
             </div>
           </form>
         </div>
+
+
+
+
 
         )
     }

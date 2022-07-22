@@ -14,7 +14,7 @@ class EventIndexItem extends React.Component{
     }
 
     render(){
-        const { title, description, location, start_date, end_date, start_time, end_time } = this.props.event;
+        // const { title, description, location, start_date, end_date, start_time, end_time } = this.props.event;
         return (
             <div className="event-index-item" onClick={this.handleClick} >
                 <div className="index-item-image">
@@ -23,7 +23,7 @@ class EventIndexItem extends React.Component{
                 <div className="event-index-info" key={this.props.key}>
                     {/* <span className="index-item-category">Title:</span> */}
                     <div className="event-index-title-box">
-                    <span className="index-item-copy" id="index-title">{title}</span>
+                    <span className="index-item-copy" id="index-title">{this.props.event.title}</span>
                     </div>
                     {/* <span className="index-item-category">Description:</span> */}
                     {/* <span className="index-item-copy">{description}</span> */}
@@ -31,10 +31,10 @@ class EventIndexItem extends React.Component{
                     {/* <span className="index-item-category">Location:</span> */}
                 
                     {/* <span className="index-item-category">Start Date:</span> */}
-                    <span className="index-item-copy" id="index-startdate">{start_date}{start_time}</span>
+                    <span className="index-item-copy" id="index-startdate">{ new Date(this.props.event.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} </span>
                   
                     <br />
-                    <span className="index-item-copy" id="index-location">{location}</span>
+                    <span className="index-item-copy" id="index-location">{this.props.event.location}</span>
                     {/* <span className="index-item-category">Start Time:</span> */}
                     {/* <span className="index-item-copy" id="index-starttime">{start_time}</span> */}
                     <br />

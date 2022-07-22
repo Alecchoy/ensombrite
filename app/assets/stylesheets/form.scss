@@ -291,7 +291,7 @@ event-form-dates{
     width: 55px;
     height: 1934px;
     border: 1px solid #d5d4da;
-    background:  #eeedf2;
+    background:#EFF2FD;
     border-right: 2px solid #d5d4da;
     z-index: 4;
 }
@@ -312,5 +312,22 @@ event-form-dates{
    margin-top: 1834px;
     width: 1440px;
     z-index: 2;
+    background: #eeedf2;
     border: .5px solid#eeedf2;
+}
+#edit-bootoon{
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    margin-top: -60px;
+}
+
+#delete-bootoon{
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    position: absolute;
 }

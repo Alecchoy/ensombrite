@@ -44,8 +44,8 @@ class UserCreatedEventIndexItem extends React.Component{
                
             
                 <div className="user-event-index-item-edits">
-                    <Link to={`/events/${event.id}/edit`}><h1>Edit</h1></Link>
-                    <button onClick={this.handleDelete}>DELETE</button>
+                    <Link to={`/events/${event.id}/edit`}><i class="fa-solid fa-pen-clip" id="edit-bootoon"></i></Link>
+                    <button onClick={this.handleDelete}><i class="fa-solid fa-trash-can" id="delete-bootoon"></i></button>
 
                 </div>
             </div>

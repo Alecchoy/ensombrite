@@ -37,7 +37,15 @@ class EventIndex extends React.Component {
             </div>
             <section className="popular">
                     <div className="categories">
-                       <h1>sd</h1>
+                       <div className="pop">Popular in </div>
+                       <div className="arr">
+                        <span className="material-symbols-outlined" id="down-arrow1">
+                        expand_more
+                        </span>  
+
+                       </div>
+                        <div className="usa"> United States</div>
+                
                     </div>
             </section>
                
