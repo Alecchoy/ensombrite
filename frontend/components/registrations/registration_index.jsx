@@ -17,24 +17,36 @@ class RegistrationIndex extends React.Component {
     }
 
     render(){
+        console.log('this.proper', this.props)
         const { registrations } = this.props;
         console.log(registrations.length > 0, 'regi')
+
+
         let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration) => (
-            <li>
-                <h1>hi</h1>
-                 <div className="regi-bar">
-                {registration.id}
-                </div> 
-            </li>
+         
+           <div className="regi-bar">
+                {/* <h1>hi</h1> */}
+                 
+              
+                {registration.event_title}
+                { new Date(registration.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)}
+                { new Date(registration.event_start_date).toDateString().split(" ")[1]}
+                { new Date(registration.event_start_date).toDateString().split(" ")[2]}
+                
+            </div>
         )) 
         return(
             
         <div>
             <HomePageNavBarContainer/>
-            <ul>
+            <div className="regi-container">
+                <div className="custom1"></div>
+                <div className="custom2"></div>
+                <div className="custom3"></div>
+                <div className="ticket-title">Orders</div>
 
             {tester}
-            </ul>
+            </div>
            
         </div>
 
