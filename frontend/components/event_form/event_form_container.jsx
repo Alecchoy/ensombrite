@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { createEvent } from '../../actions/event_actions';
 import EventForm from './event_form';
 
-const mSTP = state => {
+const mSTP = (state, {errors} )=> {
     return {
-        currentUserId: state.session.id
+        currentUserId: state.session.id,
     }
 
 }

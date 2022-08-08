@@ -2,10 +2,11 @@ import { fetchEvent, updateEvent } from "../../actions/event_actions";
 import { connect } from "react-redux";
 import EditEventForm from "./event_edit_form";
 
-const mSTP = (state) => {
+const mSTP = (state, {errors}) => {
  
     return {
         currentUserId: state.session.id
+        
     }
 }
 
