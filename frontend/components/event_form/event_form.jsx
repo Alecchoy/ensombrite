@@ -23,7 +23,7 @@ class EventForm extends React.Component {
     }
 
     handleSubmit(e){
-        console.log('state', this.state)
+        // console.log('state', this.state)
         e.preventDefault();
         // this.props.createEvent({event: this.state}).then(event => this.props.history.push(`/event/${event.id}`));
 
@@ -47,9 +47,7 @@ class EventForm extends React.Component {
             data: formData,
             contentType: false,
             processData: false
-        })
-       
-        this.props.history.push(`/`)
+        }).then(()=>this.props.history.push(`/`))
     }
 
     update(property){

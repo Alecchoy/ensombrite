@@ -53,9 +53,7 @@ class EditEventForm extends React.Component {
             data: formData,
             contentType: false,
             processData: false
-        })
-
-        this.props.history.push(`/`)
+        }).then(()=>this.props.history.push(`/`))
       
     }
 

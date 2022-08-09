@@ -13,8 +13,10 @@ class Api::EventsController < ApplicationController
     def create
     
         @event = Event.create(event_params)
-        if @event.save 
-            render :index
+        @event.host_id = current_user.id
+
+        if @event.save! 
+            redirect_to api_events_url
         else
             render json: @event.errors.full_messages, status: 422
         end
@@ -23,13 +25,14 @@ class Api::EventsController < ApplicationController
     
     def index
 
-        if params[:user_id]
-            @events = Event.where(host_id: params[:user_id])
-        # elsif params[:category]
-        #     @events = Event.where(category)
-        else
-            @events = Event.all 
-        end 
+        # if params[:user_id]
+        #     @events = Event.where(host_id: params[:user_id])
+        # # elsif params[:category]
+        # #     @events = Event.where(category)
+        # else
+        #     @events = Event.all 
+        # end 
+        @events = Event.all
         render :index
     end
 
@@ -38,7 +41,7 @@ class Api::EventsController < ApplicationController
         @event = Event.find(params[:id])
         @host = @event.host
         if @event.update(event_params)
-            render :show
+            redirect_to api_events_url
         else
             render json: @event.errors.full_messages, status: 406
         end
@@ -59,6 +62,6 @@ class Api::EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:title, :user_id, :description, :location, :host_id, :category, :start_date, :end_date, :start_time, :end_time, :photo)
+        params.require(:event).permit(:title, :description, :location, :host_id, :category, :start_date, :end_date, :start_time, :end_time, :photo)
     end
 end
