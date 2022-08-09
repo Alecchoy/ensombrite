@@ -31,6 +31,7 @@ class EditEventForm extends React.Component {
 
 
     handleSubmit(e){
+        console.log('this.state', this.props)
         e.preventDefault();
         const formData = new FormData();
 
@@ -46,14 +47,16 @@ class EditEventForm extends React.Component {
         if (this.state.imageFile){
             formData.append('event[photo]', this.state.imageFile);
         }
-        console.log('lolololol', this.state)
+        console.log('lolololol', parseFloat(this.state.id))
+        console.log('lolololol', typeof parseFloat(this.state.id))
+        console.log('thaitea', this.props)
         $.ajax({
-            url: `/api/events/${this.state.id}`,
+            url: `/api/users/${this.state.host_id}/events/${parseFloat(this.state.id)}`,
             method: 'PATCH',
             data: formData,
             contentType: false,
             processData: false
-        }).then(()=>this.props.history.push(`/`))
+        }).then(()=>this.props.history.push(`/users/${this.state.host_id}/events`))
       
     }
 

@@ -21,7 +21,7 @@ class UserCreatedEventIndexItem extends React.Component{
 
 
     render(){
-        console.log('prkkokokops', this.props)
+        // console.log('prkkokokops', this.props)
         const { event } = this.props;
         return(
             
