@@ -20,11 +20,6 @@ export const removeRegistration = (registrationId) => ({
     registrationId
 })
 
-// export const fetchRegistration = id => dispatch => (
-//     RegistrationAPIUtil.fetchRegistration(id).the(payload => (
-//         dispatch(receiveRegistration(payload))
-//     ))
-// )
 
 export const fetchRegistrations = userId => dispatch => {
     console.log(userId, 'lol')
