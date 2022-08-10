@@ -13,10 +13,10 @@ class Api::EventsController < ApplicationController
     def create
     
         @event = Event.create(event_params)
-        @event.host_id = current_user.id
+        @host = @event.host
 
         if @event.save! 
-            redirect_to api_events_url
+            render :show
         else
             render json: @event.errors.full_messages, status: 422
         end
@@ -40,8 +40,9 @@ class Api::EventsController < ApplicationController
     def update 
         @event = Event.find(params[:id])
         # @event.host_id = current_user.id
+        @host = @event.host
         if @event.update(event_params)
-            redirect_to api_user_event_url
+            render :show
         else
             render json: @event.errors.full_messages, status: 406
         end

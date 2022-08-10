@@ -29,7 +29,7 @@ class RegistrationIndex extends React.Component {
                  
               
                 {registration.event_title}
-                { new Date(registration.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)}
+                {/* { new Date(registration.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} */}
                 { new Date(registration.event_start_date).toDateString().split(" ")[1]}
                 { new Date(registration.event_start_date).toDateString().split(" ")[2]}
                 
@@ -40,10 +40,10 @@ class RegistrationIndex extends React.Component {
         <div>
             <HomePageNavBarContainer/>
             <div className="regi-container">
-                <div className="custom1"></div>
+                {/* <div className="custom1"></div>
                 <div className="custom2"></div>
                 <div className="custom3"></div>
-                <div className="ticket-title">Orders</div>
+                <div className="ticket-title">Orders</div> */}
 
             {tester}
             </div>
