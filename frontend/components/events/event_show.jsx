@@ -7,6 +7,7 @@ class EventShow extends React.Component{
     constructor(props){
         super(props)
         this.handleDelete = this.handleDelete.bind(this)
+        this.handleRegistration = this.handleRegistration.bind(this)
     }
     
     componentDidMount(){
@@ -21,12 +22,21 @@ class EventShow extends React.Component{
         this.props.history.push(`/`)
     }
 
+    handleRegistration(){
+        // this.props.fetchEvent()
+        console.log('working', this.props)
+        this.props.createRegistration()
+        
+
+    }
+
   
     render(){        
         if(!this.props.event){
             return null
         }
  console.log('this.props', this.props)
+ console.log('this.state', this.state)
         return(
             <div>
                  <HomePageNavBarContainer />
@@ -66,7 +76,7 @@ class EventShow extends React.Component{
                         <div className="show-like">
                             .
                         </div>
-                        <div className="ticket-button"> Buy here
+                        <div className="ticket-button" onClick={this.handleRegistration}> Buy here
 
                         </div>
                     </div>
@@ -87,7 +97,7 @@ class EventShow extends React.Component{
                         </div>
 
                         <div className="show-page-bottom-right">
-                        <i class="fa-solid fa-calendar-days" id="show-date-logo"></i>
+                        <i className="fa-solid fa-calendar-days" id="show-date-logo"></i>
                         <div className="show-date-text">
                             Date and time 
                             <br />
@@ -101,7 +111,7 @@ class EventShow extends React.Component{
                             </div>
                         </div>
                             
-                            <i class="fa-solid fa-location-dot" id="show-loc-logo"></i>
+                            <i className="fa-solid fa-location-dot" id="show-loc-logo"></i>
                             <div className="show-loc-text">
                                 Location
                                 <br />
@@ -112,7 +122,7 @@ class EventShow extends React.Component{
 
                             </div>
 
-                            <i class="fa-solid fa-file-invoice" id="show-refund-logo"></i>
+                            <i className="fa-solid fa-file-invoice" id="show-refund-logo"></i>
                             <div className="show-refund-policy">
                                 Refund Policy 
                                 <br />

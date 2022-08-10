@@ -7,7 +7,7 @@ const registrationsReducer = ( state= {}, action ) => {
         case RECEIVE_REGISTRATIONS:
             return action.registrations;
         case RECEIVE_REGISTRATION:
-            nextState[action.registration.id] = action.event
+            nextState[action.registration.id] = action.registration
             return nextState;
         case REMOVE_REGISTRATION:
             delete nextState[action.registrationId]

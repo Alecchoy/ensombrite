@@ -15,6 +15,9 @@ class User < ApplicationRecord
     has_many :registrations, 
         dependent: :destroy 
 
+    has_many :likes,
+        dependent: :destroy 
+
     has_many :attending_events,
         through: :registrations,
         source: :event 

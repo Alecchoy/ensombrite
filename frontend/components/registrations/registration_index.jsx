@@ -9,6 +9,7 @@ class RegistrationIndex extends React.Component {
         super(props)
         // console.log('testing',this.props.fetchRegistrations(this.props.userId));
         this.handleClick = this.handleClick.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     componentDidMount(){
@@ -27,16 +28,18 @@ class RegistrationIndex extends React.Component {
         } 
     }
     handleDelete(registration){
+        console.log("AMOST DONE", this.props, 'LOOLOL', this.state)
+        // console.log('reginald', registration)
+        console.log("properties", this.props)
         return () => {
-            console.log('reginald', registration)
-            console.log("properties", this.props)
-            this.props.deleteRegistration(registration)
+            this.props.deleteRegistration(registration.id)
         }
     }
 
 
 
     render(){
+        if(!this.props.registrations){return null}
         console.log('this.proper', this.props)
         const { registrations } = this.props;
         console.log(registrations.length > 0, 'regi')
@@ -44,7 +47,7 @@ class RegistrationIndex extends React.Component {
 
         let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration, idx) => (
          
-           <div className="regi-bar" onClick={this.handleClick(registration)} key={registration.id} >
+           <div className="regi-bar"  key={registration.id} >
                 {/* <h1>hi</h1> */}
                  
               
@@ -52,9 +55,13 @@ class RegistrationIndex extends React.Component {
                 {/* { new Date(registration.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} */}
                 { new Date(registration.event_start_date).toDateString().split(" ")[1]}
                 { new Date(registration.event_start_date).toDateString().split(" ")[2]}
-                <button onClick={this.handleDelete}> delete</button>
+                <div>
+                <button onClick={this.handleDelete(registration)} key={registration.id}> delete</button>
+
+                </div>
                 
             </div>
+        
         )) 
         return(
             

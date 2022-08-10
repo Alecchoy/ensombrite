@@ -16,11 +16,14 @@ const mSTP = ({ session, entities: { users, registrations } }) => {
 };
 
 
-const mDTP = dispatch => ({
-    deleteRegistration: (id) => dispatch(deleteRegistration(id)),
-    fetchRegistrations: (userId) => dispatch(fetchRegistrations(userId))
+const mDTP = (dispatch, ownProps) => {
+    console.log('peeepee', ownProps)
+    return {
+        deleteRegistration: (registrationId) => dispatch(deleteRegistration(registrationId)),
+        fetchRegistrations: (userId) => dispatch(fetchRegistrations(userId))
+    }
 
-})
+}
 
 export default connect(mSTP, mDTP)(RegistrationIndex)
 

@@ -1,7 +1,8 @@
 export const createRegistration = eventId => (
     $.ajax({
         method: 'POST',
-        url: `/api/events/${eventId}/registrations`
+        url: `/api/events/${eventId}/registrations`,
+        eventId
     })
 )
 
@@ -13,8 +14,9 @@ export const fetchRegistrations = userId => {
 }
 
 export const deleteRegistration = (registrationId) => {
-    $.ajax({
+    return $.ajax({
         method: 'DELETE',
-        url: `/api/registrations/${registrationId}`
+        url: `/api/registrations/${registrationId}`,
+        registrationId
     })
 }
