@@ -39,9 +39,9 @@ class Api::EventsController < ApplicationController
 
     def update 
         @event = Event.find(params[:id])
-        @event.host_id = current_user.id
+        # @event.host_id = current_user.id
         if @event.update(event_params)
-            render :show
+            redirect_to api_user_event_url
         else
             render json: @event.errors.full_messages, status: 406
         end

@@ -51,12 +51,12 @@ class EditEventForm extends React.Component {
         console.log('lolololol', typeof parseFloat(this.state.id))
         console.log('thaitea', this.props)
         $.ajax({
-            url: `/api/users/${this.state.host_id}/events/${parseFloat(this.state.id)}`,
+            url: `/api/users/${this.props.currentUserId}/events/${parseFloat(this.props.match.params.eventId)}`,
             method: 'PATCH',
             data: formData,
             contentType: false,
             processData: false
-        }).then(()=>this.props.history.push(`/users/${this.state.host_id}/events`))
+        }).then(()=>this.props.history.push(`/`))
       
     }
 
