@@ -37,6 +37,9 @@ export const fetchRegistrations = userId => dispatch => {
     
 }
 
-// export const deleteRegistration = registrationId => dispatch => (
-//     RegistrationAPIUtil.removeRegistration(registrationId).then(() => dispatch(removeRegistration(registrationId)))
-// )
+export const deleteRegistration = registrationId => dispatch => {
+    return (
+        RegistrationAPIUtil.deleteRegistration(registrationId).then((registration) => dispatch(removeRegistration(registration.id)))
+
+    )
+}

@@ -17,6 +17,7 @@ const mSTP = ({ session, entities: { users, registrations } }) => {
 
 
 const mDTP = dispatch => ({
+    deleteRegistration: (id) => dispatch(deleteRegistration(id)),
     fetchRegistrations: (userId) => dispatch(fetchRegistrations(userId))
 
 })

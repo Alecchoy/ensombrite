@@ -66,7 +66,7 @@ class EventShow extends React.Component{
                         <div className="show-like">
                             .
                         </div>
-                        <div className="ticket-button">
+                        <div className="ticket-button"> Buy here
 
                         </div>
                     </div>
