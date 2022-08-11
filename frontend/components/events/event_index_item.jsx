@@ -7,7 +7,12 @@ class EventIndexItem extends React.Component{
         super(props)
         this.handleClick = this.handleClick.bind(this)
         this.handleLike = this.handleLike.bind(this)
+        this.state = {
+
+        }
     }
+
+
 
     handleClick() {
         const eventId = this.props.event.id
@@ -15,13 +20,16 @@ class EventIndexItem extends React.Component{
     }
 
     handleLike(){
-        console.log('likes working', this.props.like)
-        if(!this.props.like){
+        // debugger
+
+        const currentLike = this.props.events.likes.find((like) => like.user_id === this.props.currentUserId)
+        if(!currentLike){
             this.props.createLike(this.props.event.id)
         } else {
-            this.props.deleteLike(this.props.like)
-            console.log('PEEENIS')
+            this.props.deleteLike(currentLike.id)
         }
+        
+
     
 
     }
@@ -62,9 +70,11 @@ class EventIndexItem extends React.Component{
                 </div>
                 
                   <div onClick={this.handleLike}>
-                    <i className="fa-solid fa-heart" id="like-button"></i>
+                    <div>
+                    <i className="fa-solid fa-heart {this.prop}" id="like-button"></i>
                     {/* <span class="material-symbols-outlined" id="like-circle">circle</span> */}
                     <i className="fa-solid fa-circle" id="like-circle"></i>
+                    </div>
 
                   </div>
             </div>

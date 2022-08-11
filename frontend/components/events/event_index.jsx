@@ -14,10 +14,12 @@ class EventIndex extends React.Component {
 
     componentDidMount(){
         this.props.fetchEvents();
+        this.props.fetchLikes(this.props.currentUserId);
     }
 
 
     render(){
+        console.log('.',this.props.like)
         return(
             <div>
                 <HomePageNavBarContainer />
@@ -54,7 +56,7 @@ class EventIndex extends React.Component {
               
                     {this.props.events.map(event => (
                         
-                            <EventIndexItem event={event} key={event.id} createLike={this.props.createLike}/>
+                            <EventIndexItem event={event} like={this.props.like} key={event.id} createLike={this.props.createLike} currentUserId={this.props.currentUserId} deleteLike={this.props.deleteLike} fetchLikes={this.props.fetchLikes} fetchEvents={this.props.fetchEvents} fetchEvent={this.props.fetchEvent}/>
             
                     ))}
 
