@@ -1,7 +1,7 @@
 import React from "react";
-import { fetchRegistrations } from "../../actions/registration_actions";
+// import { fetchRegistrations } from "../../actions/registration_actions";
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
-import RegistrationIndexItem from "./registration_index_item";
+// import RegistrationIndexItem from "./registration_index_item";
 
 
 class RegistrationIndex extends React.Component {
@@ -45,7 +45,7 @@ class RegistrationIndex extends React.Component {
         console.log(registrations.length > 0, 'regi')
 
 
-        let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration, idx) => (
+        let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration) => (
          
            <div className="regi-bar"  key={registration.id} >
                 {/* <h1>hi</h1> */}

@@ -30,10 +30,12 @@ const Greeting = ({ currentUser, logout }) => {
                 </Link>
         
             <div  id="favorite-box">
-                <span className="material-symbols-outlined" id="like-sign">
-                    favorite
-                </span>
-                <div className="nav-text">Likes</div>
+                <Link to={`/users/${currentUser.id}/likes`}>
+                    <span className="material-symbols-outlined" id="like-sign">
+                        favorite
+                    </span>
+                    <div className="nav-text">Likes</div>
+                </Link>
             </div>
                 <div id="tickets-box">
 

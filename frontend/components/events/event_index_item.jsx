@@ -6,6 +6,7 @@ class EventIndexItem extends React.Component{
     constructor(props){
         super(props)
         this.handleClick = this.handleClick.bind(this)
+        this.handleLike = this.handleLike.bind(this)
     }
 
     handleClick() {
@@ -13,39 +14,54 @@ class EventIndexItem extends React.Component{
         this.props.history.push(`/events/${eventId}`);
     }
 
+    handleLike(){
+        console.log('likes working', this.props.like)
+        if(!this.props.like){
+            this.props.createLike(this.props.event.id)
+        } else {
+            this.props.deleteLike(this.props.like)
+            console.log('PEEENIS')
+        }
+    
+
+    }
+
     render(){
         // const { title, description, location, start_date, end_date, start_time, end_time } = this.props.event;
+        // onClick={this.handleClick}
         return (
-            <div className="event-index-item" onClick={this.handleClick} >
-                <div className="index-item-image">
-                    <img src={this.props.event.photo} alt="" className="index-photo"/>
-                </div>
-                <div className="event-index-info" key={this.props.key}>
-                    {/* <span className="index-item-category">Title:</span> */}
-                    <div className="event-index-title-box">
-                    <span className="index-item-copy" id="index-title">{this.props.event.title}</span>
+            <div className="event-index-item">
+                <div onClick={this.handleClick}>
+                    <div className="index-item-image">
+                        <img src={this.props.event.photo} alt="" className="index-photo"/>
                     </div>
-                    {/* <span className="index-item-category">Description:</span> */}
-                    {/* <span className="index-item-copy">{description}</span> */}
-                
-                    {/* <span className="index-item-category">Location:</span> */}
-                
-                    {/* <span className="index-item-category">Start Date:</span> */}
-                    <span className="index-item-copy" id="index-startdate">{ new Date(this.props.event.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} </span>
-                  
-                    <br />
-                    <span className="index-item-copy" id="index-location">{this.props.event.location}</span>
-                    {/* <span className="index-item-category">Start Time:</span> */}
-                    {/* <span className="index-item-copy" id="index-starttime">{start_time}</span> */}
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    <div className="event-index-info" key={this.props.key}>
+                        {/* <span className="index-item-category">Title:</span> */}
+                        <div className="event-index-title-box">
+                        <span className="index-item-copy" id="index-title">{this.props.event.title}</span>
+                        </div>
+                        {/* <span className="index-item-category">Description:</span> */}
+                        {/* <span className="index-item-copy">{description}</span> */}
+                    
+                        {/* <span className="index-item-category">Location:</span> */}
+                    
+                        {/* <span className="index-item-category">Start Date:</span> */}
+                        <span className="index-item-copy" id="index-startdate">{ new Date(this.props.event.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} </span>
+                    
+                        <br />
+                        <span className="index-item-copy" id="index-location">{this.props.event.location}</span>
+                        {/* <span className="index-item-category">Start Time:</span> */}
+                        {/* <span className="index-item-copy" id="index-starttime">{start_time}</span> */}
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
                 </div>
                 
-                  <div>
+                  <div onClick={this.handleLike}>
                     <i className="fa-solid fa-heart" id="like-button"></i>
                     {/* <span class="material-symbols-outlined" id="like-circle">circle</span> */}
                     <i className="fa-solid fa-circle" id="like-circle"></i>

@@ -16,6 +16,7 @@ class EventIndex extends React.Component {
         this.props.fetchEvents();
     }
 
+
     render(){
         return(
             <div>
@@ -53,7 +54,7 @@ class EventIndex extends React.Component {
               
                     {this.props.events.map(event => (
                         
-                            <EventIndexItem event={event} key={event.id}/>
+                            <EventIndexItem event={event} key={event.id} createLike={this.props.createLike}/>
             
                     ))}
 

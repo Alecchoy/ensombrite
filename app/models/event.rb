@@ -17,6 +17,12 @@ class Event < ApplicationRecord
     has_many :attendants, 
         through: :registrations,
         source: :user
+    
+    has_many :likers,
+    through: :likes,
+    source: :user
+
+    
 
     
     

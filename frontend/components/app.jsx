@@ -12,6 +12,7 @@ import EventEditFormContainer from "./event_form/event_edit_container";
 import EventShowContainer from "./events/event_show_container";
 import UserCreatedEventsIndexContainer from "./user_events/user_events_index_container";
 import RegistrationIndexContainer from "./registrations/registration_index_container";
+import LikesIndexContainer from "./likes/likes_index_container";
 const App = () => (
     <div>
         <header>
@@ -37,6 +38,7 @@ const App = () => (
         <ProtectedRoute path="/events/:eventId" component={EventShowContainer} />
         <ProtectedRoute path="/users/:userid/events" component={UserCreatedEventsIndexContainer} />
         <ProtectedRoute path="/users/:user_id/registrations" component={RegistrationIndexContainer} />
+        <ProtectedRoute path="/users/:user_id/likes" component={LikesIndexContainer} />
     </Switch>
     </div>
 )

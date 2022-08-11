@@ -8,7 +8,7 @@ class Api::LikesController < ApplicationController
     def create
         @event = Event.find_by(id: params[:event_id])
         @host = @event.host
-        if @event.attendants.include?(current_user)
+        if @event.likers.include?(current_user)
             render "api/events/show"
         else
             @like = Like.create(user_id: current_user.id, event_id: (@event.id))

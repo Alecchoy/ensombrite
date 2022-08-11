@@ -6,7 +6,7 @@ export const createLike = eventId => (
     })
 )
 
-export const fetchlikes = userId => {
+export const fetchLikes = userId => {
     return $.ajax({
         method: 'GET',
         url: `/api/users/${userId}/likes`
@@ -16,6 +16,7 @@ export const fetchlikes = userId => {
 export const deleteLike = (likeId) => {
     return $.ajax({
         method: 'DELETE',
-        url: `/api/likes/${likeId}`
+        url: `/api/likes/${likeId}`,
+        likeId
     })
 }
