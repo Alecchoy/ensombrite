@@ -1,5 +1,5 @@
 import { RECEIVE_EVENT, RECEIVE_EVENTS, REMOVE_EVENT } from "../actions/event_actions";
-import { RECEIVE_LIKE } from "../actions/like_actions";
+
 const eventsReducer = ( state= {}, action ) => {
     Object.freeze(state);
     console.log("alolololction", action, action.event)
@@ -13,6 +13,7 @@ const eventsReducer = ( state= {}, action ) => {
         case REMOVE_EVENT:
             delete nextState[action.eventId]
             return nextState;
+            
         default:
             return state;
     }

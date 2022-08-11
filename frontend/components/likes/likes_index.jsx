@@ -56,4 +56,4 @@ class LikeIndex extends React.Component{
 
 }
 
-export default LikeIndex;
+export default LikeIndex

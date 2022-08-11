@@ -7,12 +7,12 @@ class EventIndexItem extends React.Component{
         super(props)
         this.handleClick = this.handleClick.bind(this)
         this.handleLike = this.handleLike.bind(this)
-        this.state = {
-
-        }
+       
     }
 
-
+    // componentDidMount(){
+    //     this.props.fetchEvent(this.props.event.id)
+    // }
 
     handleClick() {
         const eventId = this.props.event.id
@@ -22,13 +22,19 @@ class EventIndexItem extends React.Component{
     handleLike(){
         // debugger
 
-        const currentLike = this.props.events.likes.find((like) => like.user_id === this.props.currentUserId)
+        console.log("UNDEFINED FIND???", this.props.event.likes)
+
+        const currentLike = this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId)
+        console.log("CURRENT LIKE ", currentLike)
         if(!currentLike){
-            this.props.createLike(this.props.event.id)
-        } else {
-            this.props.deleteLike(currentLike.id)
-        }
+            this.props.createLike(this.props.event.id).then(()=> this.props.fetchEvents())
         
+        } else {
+            this.props.deleteLike(currentLike.id).then(()=> this.props.fetchEvents())
+        }
+        console.log()
+        
+        // this.props.fetchEvent(this.props.event.id)
 
     
 
@@ -71,7 +77,7 @@ class EventIndexItem extends React.Component{
                 
                   <div onClick={this.handleLike}>
                     <div>
-                    <i className="fa-solid fa-heart {this.prop}" id="like-button"></i>
+                    <i className={`fa-solid fa-heart ${ this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId) ? "liked" : "unliked"}`} id="like-button"></i>
                     {/* <span class="material-symbols-outlined" id="like-circle">circle</span> */}
                     <i className="fa-solid fa-circle" id="like-circle"></i>
                     </div>

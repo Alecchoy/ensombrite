@@ -10,6 +10,11 @@ import { Link  } from 'react-router-dom';
 class EventIndex extends React.Component {
     constructor(props){
         super(props)
+        this.state = {
+            index: 0
+        }
+
+        this.filterCategory = this.filterCategory.bind(this)
     }
 
     componentDidMount(){
@@ -17,8 +22,67 @@ class EventIndex extends React.Component {
         this.props.fetchLikes(this.props.currentUserId);
     }
 
+    filterCategory(index){
+        this.setState({index});
+    }
+
 
     render(){
+        const {events} = this.props;
+
+        const categoryList = [
+            'All',
+            'Performing & Visual Arts',
+            'Music Festival',
+            'Travel & Outdoor',
+            'Health',
+            'Sports & Fitness',
+            'Business',
+            'Food & Drink',
+            'Hobbies'
+        ]
+
+        let selectedCategory = this.state.index;
+        
+        const categories = categoryList.map((category, index) => {
+                const currentClass = index === selectedCategory ? 'active' : 'inactive';
+                return (
+                    <li key={index} classname={currentClass} onClick={() => this.filterCategory(index)}>{category}</li>
+                )
+        })
+
+        let filteredEvents;
+            switch(this.state.index){
+                case 0:
+                    filteredEvents = events;
+                    break;
+                case 1:
+                    filteredEvents = events.filter(event => event.category === "Performing & Visual Arts");
+                    break;
+                case 2:
+                    filteredEvents = events.filter(event => event.category === "Music Festival");
+                    break;
+                case 3:
+                    filteredEvents = events.filter(event => event.category === "Travel & Outdoor");
+                    break;
+                case 4:
+                    filteredEvents = events.filter(event => event.category === "Health");
+                    break;
+                case 5:
+                    filteredEvents = events.filter(event => event.category === "Sport & Fitness");
+                    break;
+                case 6:
+                    filteredEvents = events.filter(event => event.category === "Business");
+                    break;
+                case 7:
+                    filteredEvents = events.filter(event => event.category === "Food & Drink");
+                    break;
+                case 8:
+                    filteredEvents = events.filter(event => event.category === "Hobbies");
+                    break;
+
+            }
+        
         console.log('.',this.props.like)
         return(
             <div>
@@ -51,12 +115,26 @@ class EventIndex extends React.Component {
                 
                     </div>
             </section>
+
+            <div className="category-list-container">
+                <ul className="category-list">
+                    {categories}
+                </ul>
+            </div>
                
                 <div className="all-events">
               
-                    {this.props.events.map(event => (
+                    {filteredEvents.map(event => (
                         
-                            <EventIndexItem event={event} like={this.props.like} key={event.id} createLike={this.props.createLike} currentUserId={this.props.currentUserId} deleteLike={this.props.deleteLike} fetchLikes={this.props.fetchLikes} fetchEvents={this.props.fetchEvents} fetchEvent={this.props.fetchEvent}/>
+                            <EventIndexItem event={event} 
+                                            like={this.props.like} 
+                                            key={event.id} 
+                                            createLike={this.props.createLike} 
+                                            currentUserId={this.props.currentUserId} 
+                                            deleteLike={this.props.deleteLike} 
+                                            fetchLikes={this.props.fetchLikes} 
+                                            fetchEvents={this.props.fetchEvents} 
+                                            fetchEvent={this.props.fetchEvent}/>
             
                     ))}
 

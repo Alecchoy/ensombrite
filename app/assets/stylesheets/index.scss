@@ -196,7 +196,7 @@ background-position: 0px -220px;
     width: 40px;
     height: 40px;
     z-index: 99999;
-    color: rgb(255, 255, 255);
+    // color: rgb(255, 255, 255);
     // outline: 1px red solid;
     // bottom: 0;
     // right: 0;
@@ -205,6 +205,15 @@ background-position: 0px -220px;
 #like-button:hover{
     color: #6627CC;
 }
+
+.liked{
+    color: #6627CC;
+}
+
+.unliked{
+      color: rgb(255, 255, 255);
+}
+
 #like-circle{
     display: flex;
     position: sticky;

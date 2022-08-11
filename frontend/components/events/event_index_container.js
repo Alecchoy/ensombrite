@@ -6,6 +6,7 @@ import {createLike, fetchLikes, deleteLike} from "../../actions/like_actions"
 
 const mSTP = (state, ownProps) => {
     // console.log('mSTP', state, 'aSA', ownProps)
+    
     return{
         events: Object.values(state.entities.events),
         like: Object.values(state.entities.likes),
