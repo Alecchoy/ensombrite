@@ -16,6 +16,7 @@ class RegistrationIndexItem extends React.Component{
     }
 
     render(){
+        const { registration } = this.props;
         return (
             <div>
                 {registration.event_title}

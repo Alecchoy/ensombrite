@@ -21,6 +21,7 @@ const mDTP = (dispatch, ownProps) => {
     return {
         deleteRegistration: (registrationId) => dispatch(deleteRegistration(registrationId)),
         fetchRegistrations: (userId) => dispatch(fetchRegistrations(userId))
+        
     }
 
 }

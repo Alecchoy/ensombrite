@@ -55,6 +55,12 @@ class RegistrationIndex extends React.Component {
                 {/* { new Date(registration.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} */}
                 { new Date(registration.event_start_date).toDateString().split(" ")[1]}
                 { new Date(registration.event_start_date).toDateString().split(" ")[2]}
+                {registration.event_start_time.slice(11,16)}
+
+                <div className="regi-photo">
+                    <img src={registration.event_photo} alt="background-pic" />
+
+                </div>
                 <div>
                 <button onClick={this.handleDelete(registration)} key={registration.id}> delete</button>
 

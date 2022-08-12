@@ -45,9 +45,12 @@ class EventIndex extends React.Component {
         let selectedCategory = this.state.index;
         
         const categories = categoryList.map((category, index) => {
-                const currentClass = index === selectedCategory ? 'active' : 'inactive';
+                const currentClass = index === selectedCategory ? ('active', 'active-one') : ('inactive', 'deactive');
                 return (
-                    <li key={index} classname={currentClass} onClick={() => this.filterCategory(index)}>{category}</li>
+                    <div className="cat-list">
+                        <li key={index} className={currentClass} onClick={() => this.filterCategory(index)}>{category}</li>
+
+                    </div>
                 )
         })
 
