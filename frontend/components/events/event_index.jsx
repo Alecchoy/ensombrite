@@ -28,6 +28,7 @@ class EventIndex extends React.Component {
 
 
     render(){
+        // if(!this.props.events){return null}
         const {events} = this.props;
 
         const categoryList = [
@@ -85,6 +86,7 @@ class EventIndex extends React.Component {
                     break;
 
             }
+            // if(!filteredEvents){return null}
         
         console.log('.',this.props.like)
         return(

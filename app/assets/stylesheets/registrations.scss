@@ -3,15 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .regi-bar {
-    border: black 1px solid;
-    padding: 12px;
-    width: 680px;
-    height: 115px;
+    // border: black 1px solid;
+    // padding: 12px;
+    width: 730px;
+    height: 160px;
     margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
     margin-left: 370px;
     border-radius: 5px;
+    display: flex;
+    justify-content: row;
+    box-shadow: 0 0 5px #d4d8df;
 
+}
+
+.regi-bar:hover {
+    box-shadow: 0 0 20px #c7cfdd;
 }
 
 .ticket-title{
@@ -26,10 +33,40 @@
 }
 
 .regi-photo{
-    height: 56px;
-    width: 56px;
+    height: 160px;
+    width: 270px;
+    position: sticky;
     // border: 1px solid black;
     display: flex;
-    margin-top: 15px;
-    margin-left: 5px;
+    // margin-top: 15px;
+    // margin-left: 5px;
 }
+.regi-description-box{
+    padding-left: 20px;
+    width: 300px;
+}
+
+.attending{
+    padding-top: 10px;
+}
+
+.attending-title{
+    padding-top: 40px;
+}
+
+.deletion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    // margin-top: -20px;
+    // width: 50px;
+}
+
+.delete-iconss{
+    font-size: 20px;
+    color: red;
+    // margin-top: 50p
+}
+
+// .regi-add

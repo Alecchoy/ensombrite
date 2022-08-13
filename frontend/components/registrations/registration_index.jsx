@@ -47,22 +47,27 @@ class RegistrationIndex extends React.Component {
 
         let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration) => (
          
-           <div className="regi-bar"  key={registration.id} >
+           <div className="regi-bar" onClick={this.handleClick(registration)} key={registration.id} >
                 {/* <h1>hi</h1> */}
                  
               
-                {registration.event_title}
+               
                 {/* { new Date(registration.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} */}
-                { new Date(registration.event_start_date).toDateString().split(" ")[1]}
-                { new Date(registration.event_start_date).toDateString().split(" ")[2]}
-                {registration.event_start_time.slice(11,16)}
-
                 <div className="regi-photo">
                     <img src={registration.event_photo} alt="background-pic" />
+                </div>
+                <div className="regi-description-box">
+                    <div className="attending">ATTENDING</div>
+                    <div className="attending-title"> {registration.event_title}</div>
+              
+                       
+                        <div> {new Date(registration.event_start_date).toDateString()}</div>
+                        <div>{registration.event_start_time.slice(11,16)}</div>
+                
 
                 </div>
-                <div>
-                <button onClick={this.handleDelete(registration)} key={registration.id}> delete</button>
+                <div className="deletion">
+                <button onClick={this.handleDelete(registration)} key={registration.id}><i className="fa-solid fa-ban delete-iconss"></i></button>
 
                 </div>
                 

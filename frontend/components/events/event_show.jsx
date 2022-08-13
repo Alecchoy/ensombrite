@@ -16,6 +16,8 @@ class EventShow extends React.Component{
         // this.props.fetchEvent(this.props.event.id)
     }
 
+
+
     handleDelete(){
         this.props.deleteEvent()
         // .then(() => (this.props.history.push('/')))
@@ -76,7 +78,7 @@ class EventShow extends React.Component{
                         <div className="show-like">
                             .
                         </div>
-                        <div className="ticket-button" onClick={this.handleRegistration}> Buy here
+                        <div className="ticket-button" onClick={this.handleRegistration}> Buy Here
 
                         </div>
                     </div>
