@@ -73,7 +73,7 @@ class RegistrationIndex extends React.Component {
                 </div>
                 {/* <Footer /> */}
             </div>
-            <Footer />
+            {/* <Footer /> */}
          </div>   
 
         )
