@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
 import GreetingContainer from "../greeting/greeting_container";
+import Footer from "../footer/footer";
 
 class EventShow extends React.Component{
     constructor(props){
@@ -27,7 +28,7 @@ class EventShow extends React.Component{
     handleRegistration(){
         // this.props.fetchEvent()
         console.log('working', this.props)
-        this.props.createRegistration()
+        this.props.createRegistration().then(() => this.props.fetchEvent()).then(() => this.props.fetchRegistrations(this.props.userId))
         
 
     }
@@ -145,6 +146,7 @@ class EventShow extends React.Component{
                 {/* <button onClick={() => this.handleDelete()}>DELETE
 
                 {/* <img src={this.props.event.photo}/> */}
+                {/* <Footer /> */}
             </div>
         )
        

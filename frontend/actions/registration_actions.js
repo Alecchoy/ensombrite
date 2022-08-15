@@ -32,6 +32,7 @@ export const fetchRegistrations = userId => dispatch => {
     
 }
 
+
 export const createRegistration = eventId => dispatch => {
     return (
         RegistrationAPIUtil.createRegistration(eventId).then(registration => {

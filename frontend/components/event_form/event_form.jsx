@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePageNavBarContainer from '../navbars/homepage_nav_bar_container';
 import GreetingContainer from "../greeting/greeting_container";
+import Footer from "../footer/footer";
 
 class EventForm extends React.Component {
     constructor(props){
@@ -172,6 +173,7 @@ class EventForm extends React.Component {
                     <button  className="submit-form">Save</button>
                 </div>
             </form>
+            <Footer />
         </div>
         )
         

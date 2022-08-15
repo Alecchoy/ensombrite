@@ -12,7 +12,8 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => ({
     createEvent: event => dispatch(createEvent(event)),
-    fetchEvents: events => dispatch(fetchEvents(events))
+    fetchEvents: events => dispatch(fetchEvents(events)),
+    
 })
 
 export default connect(mSTP, mDTP)(HomePageNavBar)

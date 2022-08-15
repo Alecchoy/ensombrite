@@ -40,10 +40,12 @@ const Greeting = ({ currentUser, logout }) => {
                 <div id="tickets-box">
 
             <Link to={`/users/${currentUser.id}/registrations`}>
+                <div >
                     <span className="material-symbols-outlined" id="ticket-sign">
                         book_online
                     </span>
                     <div className="nav-text">Tickets</div>
+                </div>
             </Link>
                 </div>
 

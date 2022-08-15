@@ -1,5 +1,6 @@
 import React from "react";
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
+import Footer from "../footer/footer";
 
 class LikeIndex extends React.Component{
     constructor(props){
@@ -66,6 +67,7 @@ class LikeIndex extends React.Component{
                 <div className="regi-container">
                     {tester}
                 </div>
+                {/* <Footer /> */}
             </div>
         )
     }

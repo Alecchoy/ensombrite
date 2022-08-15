@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import Footer from "../footer/footer";
 
 
 class EventIndexItem extends React.Component{
@@ -27,10 +28,10 @@ class EventIndexItem extends React.Component{
         const currentLike = this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId)
         console.log("CURRENT LIKE ", currentLike)
         if(!currentLike){
-            this.props.createLike(this.props.event.id).then(()=> this.props.fetchEvents())
+            this.props.createLike(this.props.event.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
         
         } else {
-            this.props.deleteLike(currentLike.id).then(()=> this.props.fetchEvents())
+            this.props.deleteLike(currentLike.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
         }
         console.log()
         
@@ -84,6 +85,7 @@ class EventIndexItem extends React.Component{
                     </div>
 
                   </div>
+                  
             </div>
         )
     }

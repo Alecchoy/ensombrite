@@ -10,6 +10,7 @@ const mSTP = (state, ownProps) => {
     return{
         events: Object.values(state.entities.events),
         like: Object.values(state.entities.likes),
+        // registration: Object.values()
         currentUserId: state.session.id
 
     }
