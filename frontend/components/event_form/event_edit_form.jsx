@@ -75,7 +75,18 @@ class EditEventForm extends React.Component {
             fileReader.readAsDataURL(file)
         }
     }
-
+    
+    renderErrors(){
+        return(
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`errors-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     // update(field){
     //     return e => this.setState({[field]: e.currentTarget.value})
@@ -166,6 +177,7 @@ class EditEventForm extends React.Component {
                         <textarea type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} className="fill-out-event-form-2" />
                     </div>    
                 </div>
+                {/* {this.renderErrors()} */}
                 
                     <button  className="submit-form">Save</button>
                 </div>

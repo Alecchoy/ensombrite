@@ -43,6 +43,7 @@ class EventIndexItem extends React.Component{
     render(){
         // const { title, description, location, start_date, end_date, start_time, end_time } = this.props.event;
         // onClick={this.handleClick}
+        if(!this.props.event.likes){return null}
         return (
             <div className="event-index-item">
                 <div onClick={this.handleClick}>

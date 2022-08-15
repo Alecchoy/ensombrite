@@ -84,6 +84,21 @@ file8 = URI.open('https://active-storage-ensombryte-dev.s3.us-west-1.amazonaws.c
 xgames.photo.attach(io: file8, filename:'xgames.jpeg')
 
 
+# colorguard = Event.create!(title: "California Color Guard Circuit Competition", description: "California Color Guard Circuit (CCGC) creates safe spaces where students and educators of indoor marching arts are visible and celebrated. CCGC serves the Northern California marching arts community of performers, instructors, judges, families, and alumni through the coordination of competitive contests and educational forums to instill our values of inclusion, sportsmanship, and excellence.", location: "Oak Grove high School", category: 'Performing & Visual Arts' , start_date: "07/17/2023" , end_date: "07/19/2023", start_time: "11:00:00", end_time: "23:00:00" , host_id: 4 )
+# file9 = URI.open('https://active-storage-ensombryte-pro.s3.us-west-1.amazonaws.com/colorguard.png')
+# colorguard.photo.attach(io: file9, filename:'colorguard.png')
+
+# scpa = Event.create!(title: "SCPA Finals", description: "SCPA is an all volunteer nonprofit public benefit corporation and is not organized for the private gain of any person. It is organized under the California Nonprofit Public Benefit Corporation Law for public purposes. The specific purpose of this corporation is to promote the growth of the percussive arts through competition, performance and educational activities and to encourage goodwill, good sportsmanship and camaraderie through such activities.", location: "Toyota Arena", category: 'Performing & Visual Arts' , start_date: "04/14/2023" , end_date: "04/16/2023", start_time: "11:00:00", end_time: "23:00:00" , host_id: 4 )
+# file10 = URI.open('https://active-storage-ensombryte-pro.s3.us-west-1.amazonaws.com/scpa.jpeg')
+# scpa.photo.attach(io: file10, filename:'scpa.jpeg')
+
+# wgi = Event.create!(title: "WGI Percussion World Championships", description: "The WGI Percussion and Winds World Championships is the premier winter showcase for indoor percussion and wind ensembles. The event is produced by WGI Sport of the Arts which also produces the WGI Color Guard World Championships on a separate weekend. The WGI Championships typically draw 15,000 participants over two weekends, including more than 350 color guards and 250 percussion ensembles from 40 states and 5 countries.
+
+# The percussion contest on Thursday, Friday and Saturday features preliminary rounds in nine classes of competition, providing opportunities for units at all levels of expertise, from beginning to advanced. Scholastic units draw members from the same high school. Independent units draw members who are not necessarily affiliated with a particular school. Concert percussion units do not include marching in their programs. Up to 15 units in each division advance to the Finals round, where medals are awarded to the top three finishers.
+# ", location: "Dayton, Ohio", category: 'Performing & Visual Arts' , start_date: "04/20/2023" , end_date: "04/22/2023", start_time: "06:00:00", end_time: "23:00:00" , host_id: 4 )
+# file11 = URI.open('https://active-storage-ensombryte-pro.s3.us-west-1.amazonaws.com/wgi.jpeg')
+# wgi.photo.attach(io: file11, filename:'wgi.jpeg')
+
 Registration.create!(user_id: 1, event_id: 1)
 Registration.create!(user_id: 2, event_id: 1)
 Registration.create!(user_id: 2, event_id: 2)

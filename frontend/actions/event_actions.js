@@ -2,8 +2,9 @@ import * as EventAPIUtil from '../util/event_api_util';
 
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_EVENT';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_EVENT_ERRORS = 'RECEIVE_EVENT_ERRORS';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
+export const REMOVE_EVENT_ERRORS = "REMOVE_EVENT_ERRORS"
 
 
 export const receiveEvents = events => ({
@@ -16,9 +17,13 @@ export const receiveEvent = (event) => ({
     event
 })
 
-export const receiveErrors = errors => ({
-    type: RECEIVE_ERRORS,
+export const receiveEventErrors = errors => ({
+    type: RECEIVE_EVENT_ERRORS,
     errors
+})
+
+export const removeEventErrors = () => ({
+    type: REMOVE_EVENT_ERRORS
 })
 
 

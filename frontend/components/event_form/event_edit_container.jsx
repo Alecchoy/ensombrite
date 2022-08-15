@@ -1,11 +1,11 @@
-import { fetchEvent } from "../../actions/event_actions";
+import { fetchEvent, removeEventErrors } from "../../actions/event_actions";
 import { connect } from "react-redux";
 import EditEventForm from "./event_edit_form";
 
-const mSTP = (state, {errors}) => {
-    console.log('oatmeal', state)
+const mSTP = (state, errors) => {
+    console.log('oatmeal', errors)
     return {
-        currentUserId: state.session.id,
+        // errors: errors.eventErrors,
         currentEventId: state.entities.events.id
         
     }
@@ -14,6 +14,8 @@ const mSTP = (state, {errors}) => {
 const mDTP = (dispatch, ownProps) => {
     return {
         fetchEvent: () => dispatch(fetchEvent(ownProps.match.params.eventId)),
+        removeEventErrors: () => dispatch(removeEventErrors())
+        
         // updateEvent: (event) => dispatch(updateEvent(event))
     }
 }

@@ -3,6 +3,7 @@ import HomePageNavBar from "../navbars/homepage_nav_bar";
 import EventIndexItem from "./event_index_item";
 import GreetingContainer from "../greeting/greeting_container";
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
+import Footer from "../footer/footer";
 import { Link  } from 'react-router-dom';
 
 
@@ -28,7 +29,9 @@ class EventIndex extends React.Component {
 
 
     render(){
-        // if(!this.props.events){return null}
+        console.log('this.props', this.props)
+        if(!this.props.like){return null}
+        if(!this.props.events){return null}
         const {events} = this.props;
 
         const categoryList = [
@@ -86,7 +89,7 @@ class EventIndex extends React.Component {
                     break;
 
             }
-            // if(!filteredEvents){return null}
+            if(!filteredEvents){return null}
         
         console.log('.',this.props.like)
         return(
@@ -122,6 +125,7 @@ class EventIndex extends React.Component {
             </section>
 
             <div className="category-list-container">
+                <div className="category-title">Categories</div>
                 <ul className="category-list">
                     {categories}
                 </ul>
@@ -144,6 +148,7 @@ class EventIndex extends React.Component {
                     ))}
 
                 </div>
+                <Footer />
             </div>
         )
     }

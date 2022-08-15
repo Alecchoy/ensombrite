@@ -43,7 +43,7 @@ class SignupForm extends React.Component {
         return (
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            {this.renderErrors()}
+           
           <div className="signup-site-name1">
                         ensombrite
                     </div>
@@ -57,24 +57,29 @@ class SignupForm extends React.Component {
             <div className="signup-form">
                 <br />
                 <label className="login-input-label">
+                    <div className="password-input-text">email address</div>
                     <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" />
                 </label>
                 <br />
                 <label className="login-input-label">
+                <div className="password-input-text">first name</div>
                     <input type="text" value={this.state.fname} onChange={this.update('fname')} className="login-input" />
                 </label>
                 <br />
                 <label className="login-input-label">
+                <div className="password-input-text">last name</div>
                     <input type="text" value={this.state.lname} onChange={this.update('lname')} className="login-input" />
                 </label>
                 <br />
                 <label className="login-input-label">
+                <div className="password-input-text">password</div>
                     <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
                 </label>
                 <br />
                 <label ></label>
                 <input className="login-button-input" type="submit" value={this.props.formType} />
                 <br />
+                {this.renderErrors()}
                 <div className="login-from-signup">
                     <div className="signup-from-login-link">
                     { this.props.navLink}

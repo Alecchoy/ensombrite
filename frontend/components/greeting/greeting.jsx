@@ -59,6 +59,7 @@ const Greeting = ({ currentUser, logout }) => {
                     <span className="material-symbols-outlined" id="down-arrow">
                         expand_more
                     </span>
+                 
                 </div>
                
 
@@ -66,6 +67,8 @@ const Greeting = ({ currentUser, logout }) => {
                 <div className="dropdown-content">
                     <Link to={`/users/${currentUser.id}/events`}><p id="dropdown-options">Manage Your Event</p></Link>
                     <p><button  className="header-button" id="dropdown-logout" onClick={logout}>Log Out</button></p>
+                    {/* <p><a className="dropdown-options" href="https://github.com/Alecchoy">Github</a></p> */}
+                    {/* <p><a className="dropdown-options" href="https://www.linkedin.com/in/alec-choy-387aab13b/">LinkedIn</a></p> */}
 
                 </div>
 

@@ -288,3 +288,54 @@
 
 }
 
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // border-top: 2px black solid;
+    // background-color:#0b2874;
+    background-color: #1454f6;
+    background-color: #193a8f;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.superpowers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+    // border-top: 2px black solid;
+
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ider{
+    color:#fff
+}
+
+
+.linkedin-footer{
+    // border-bottom: 1px white solid;
+}
+
+.linkedin-footer:hover{
+    color: #a9bef4;
+    border-bottom: 1px #a9bef4 solid;
+}
+
+.github-footer{
+    // border-bottom: 1px white solid;
+}
+
+.github-footer:hover{
+    color: #a9bef4;
+    border-bottom: 1px #a9bef4 solid;
+}

@@ -29,13 +29,19 @@ body {
 
   .password-input-text {
     display: flex;
-    align-items: flex-start;
+    // align-items: flex-start;
+    width: 100px;
     justify-content: flex-start;
-    height: 20px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 30px;
     padding-right: 112px;
     margin-right: 164px;
-    font-size: 13px;
+    font-size: 10px;
     position: absolute;
+    color: rgb(112,115, 133);
+    font-family: 'Roboto', sans-serif;
+    // border: 1px black solid;
 
   }
   .login-input{

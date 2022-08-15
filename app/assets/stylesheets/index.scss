@@ -33,13 +33,25 @@
 }
 
 .active-one{
-    border-bottom: #1454f6 3px solid;
+    border-bottom: #1454f6 2px solid;
+    color: #1454f6;
 
 }
 
 .deactive{
-    border-bottom: 2px green solid;
+    // border-bottom: 2px green solid;
+    color:#9ea0ab;
 
+}
+.deactive:hover{
+    color:#9ea0ab;
+    border-bottom: #9ea0ab 2px solid;
+}
+
+.category-title{
+    font-size: 30px;
+    padding-bottom: 10px;
+    // border-bottom: black 2px solid;
 }
 
 
@@ -330,6 +342,11 @@ background-position: 0px -220px;
     margin-right: 1400px;
     margin-top: 30px;
 
+
+}
+
+.category-list-container{
+    font-family: 'Roboto', sans-serif;
 }
 #each-word{
     display: flex;
