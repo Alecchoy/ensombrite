@@ -44,4 +44,38 @@ Image Hosting: Active Storage and AWS S3
 <img src="https://github.com/Alecchoy/ensombrite/blob/main/app/assets/images/category.gif" />
 
 
+## Example Code
+
+## Creating likes on the index page 
+
+One of the more technical challenges that I came across was to persist the like button to stay on if the user has liked the event before. I was having trouble connecting a like to each event index item. I solved it by making sure my that each individual event card had its own function to handle likes and tell whether it has been liked before or not.
+
+```jsx
+//frontend/components/event/event_index_item.jsx
+    handleLike(){
+        const currentLike = this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId)
+        if(!currentLike){
+            this.props.createLike(this.props.event.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
+        
+        } else {
+            this.props.deleteLike(currentLike.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
+        }
+    }
+```
+```jsx
+   <div onClick={this.handleLike}>
+      <div>
+          <i className={`fa-solid fa-thumbs-up addition
+          ${ this.props.event.likes.find(({user_id}) => 
+          user_id === this.props.currentUserId) ? "liked" : "unliked"}`} id="like-button"></i>
+        <i className="fa-solid fa-circle" id="like-circle"></i>
+      </div>
+    </div>
+```
+
+## Future Implementations
+- Confirmation Page
+- Google Maps API
+- Full Error Rendering
+
 
