@@ -21,9 +21,6 @@ class EventIndexItem extends React.Component{
     }
 
     handleLike(){
-        // debugger
-
-
         const currentLike = this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId)
         if(!currentLike){
             this.props.createLike(this.props.event.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
@@ -31,16 +28,9 @@ class EventIndexItem extends React.Component{
         } else {
             this.props.deleteLike(currentLike.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
         }
-        
-        // this.props.fetchEvent(this.props.event.id)
-
-    
-
     }
 
     render(){
-        // const { title, description, location, start_date, end_date, start_time, end_time } = this.props.event;
-        // onClick={this.handleClick}
         if(!this.props.event.likes){return null}
         return (
             <div className="event-index-item">
@@ -49,22 +39,13 @@ class EventIndexItem extends React.Component{
                         <img src={this.props.event.photo} alt="" className="index-photo"/>
                     </div>
                     <div className="event-index-info" key={this.props.key}>
-                        {/* <span className="index-item-category">Title:</span> */}
                         <div className="event-index-title-box">
                         <span className="index-item-copy" id="index-title">{this.props.event.title}</span>
                         </div>
-                        {/* <span className="index-item-category">Description:</span> */}
-                        {/* <span className="index-item-copy">{description}</span> */}
-                    
-                        {/* <span className="index-item-category">Location:</span> */}
-                    
-                        {/* <span className="index-item-category">Start Date:</span> */}
                         <span className="index-item-copy" id="index-startdate">{ new Date(this.props.event.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} </span>
                     
                         <br />
                         <span className="index-item-copy" id="index-location">{this.props.event.location}</span>
-                        {/* <span className="index-item-category">Start Time:</span> */}
-                        {/* <span className="index-item-copy" id="index-starttime">{start_time}</span> */}
                         <br />
                         <br />
                         <br />
@@ -74,11 +55,9 @@ class EventIndexItem extends React.Component{
                     
                     </div>
                 </div>
-                {/* asdasdasd */}
                   <div onClick={this.handleLike}>
                     <div>
                     <i className={`fa-solid fa-thumbs-up addition ${ this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId) ? "liked" : "unliked"}`} id="like-button"></i>
-                    {/* <span class="material-symbols-outlined" id="like-circle">circle</span> */}
                     <i className="fa-solid fa-circle" id="like-circle"></i>
                     </div>
 
@@ -88,5 +67,4 @@ class EventIndexItem extends React.Component{
         )
     }
 }
-// sdkasldaskdl;asdk
 export default withRouter(EventIndexItem)
