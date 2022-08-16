@@ -2,7 +2,7 @@
 
 <img src="https://github.com/Alecchoy/ensombrite/blob/main/app/assets/images/ensom1.gif"/>
 
-Ensombrite is a full-stack clone of Evenbrite. Similar to its duplicate, it allows users to create, manage, events, register, and like events.
+Ensombrite is a full-stack clone of Evenbrite with styling similar to Insomniac. Similar to its duplicate, it allows users to create, manage, events, register, and like events.
 
 ## Technologies
 
