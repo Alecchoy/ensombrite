@@ -181,13 +181,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alecchoy/Insombryte.git"
+    "url": "git+https://github.com/Alecchoy/ensombrite.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Alecchoy/Insombryte/issues"
+    "url": "https://github.com/Alecchoy/ensombrite/issues"
   },
-  "homepage": "https://github.com/Alecchoy/Insombryte#readme"
+  "homepage": "https://github.com/Alecchoy/ensombrite#readme"
 }

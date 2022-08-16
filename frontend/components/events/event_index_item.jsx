@@ -74,6 +74,7 @@ class EventIndexItem extends React.Component{
                         <br />
                         <br />
                         <br />
+                    
                     </div>
                 </div>
                 
@@ -90,5 +91,5 @@ class EventIndexItem extends React.Component{
         )
     }
 }
-
+// sdkasldaskdl;asdk
 export default withRouter(EventIndexItem)
