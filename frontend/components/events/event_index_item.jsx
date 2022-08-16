@@ -77,7 +77,7 @@ class EventIndexItem extends React.Component{
                     
                     </div>
                 </div>
-                
+                {/* asdasdasd */}
                   <div onClick={this.handleLike}>
                     <div>
                     <i className={`fa-solid fa-thumbs-up addition ${ this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId) ? "liked" : "unliked"}`} id="like-button"></i>
