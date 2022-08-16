@@ -3,6 +3,7 @@ import UserCreatedEventIndexItem from "./user_events_index_item";
 import {Link, withRouter} from 'react-router-dom';
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
 import GreetingContainer from "../greeting/greeting_container";
+import Footer from "../footer/footer";
 
 class UserCreatedEventIndex extends React.Component{
     componentDidMount(){
@@ -48,6 +49,9 @@ class UserCreatedEventIndex extends React.Component{
                 <div className="title-box"><div class="event-list"></div></div>
                
                 {displayedEvents}
+                <footer>
+                    <Footer />
+                </footer>
             </div>
         )
     }

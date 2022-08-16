@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../footer/footer";
+
 
 
 class LoginForm extends React.Component {
@@ -98,7 +98,7 @@ class LoginForm extends React.Component {
             </div>
           </form>
                     <img className="login-form-image" src={window.Kanye}></img> 
-                    <Footer />
+                  
         </div>
 
         )

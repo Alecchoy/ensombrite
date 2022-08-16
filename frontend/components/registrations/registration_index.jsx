@@ -68,12 +68,20 @@ class RegistrationIndex extends React.Component {
          <div>
             <div>
                 <HomePageNavBarContainer/>
+                <div className="hoverer">
+                        <div className="hover-text">
+                            REGISTERED EVENTS
+                        </div>
+                    </div>
                 <div className="regi-container">
                 {tester}
                 </div>
                 {/* <Footer /> */}
             </div>
-            {/* <Footer /> */}
+            <footer>
+                <Footer />
+            </footer>
+
          </div>   
 
         )

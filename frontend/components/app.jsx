@@ -13,6 +13,7 @@ import EventShowContainer from "./events/event_show_container";
 import UserCreatedEventsIndexContainer from "./user_events/user_events_index_container";
 import RegistrationIndexContainer from "./registrations/registration_index_container";
 import LikesIndexContainer from "./likes/likes_index_container";
+// import Footer from "./footer/footer";
 const App = () => (
     <div>
         <header>
@@ -40,6 +41,7 @@ const App = () => (
         <ProtectedRoute path="/users/:user_id/registrations" component={RegistrationIndexContainer} />
         <ProtectedRoute path="/users/:user_id/likes" component={LikesIndexContainer} />
     </Switch>
+
     </div>
 )
 

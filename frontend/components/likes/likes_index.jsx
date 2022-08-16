@@ -64,9 +64,17 @@ class LikeIndex extends React.Component{
         return(
             <div>
                 <HomePageNavBarContainer />
+                <div className="hoverer">
+                    <div className="hover-text">
+                        LIKED EVENTS
+                    </div>
+                </div>
                 <div className="regi-container">
                     {tester}
                 </div>
+                <footer>
+                 <Footer />
+                </footer>
                 {/* <Footer /> */}
             </div>
         )

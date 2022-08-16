@@ -182,7 +182,7 @@ class EditEventForm extends React.Component {
                     <button  className="submit-form">Save</button>
                 </div>
             </form>
-            <Footer/>
+           
         </div>
         )
 
