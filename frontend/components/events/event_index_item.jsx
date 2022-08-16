@@ -79,7 +79,7 @@ class EventIndexItem extends React.Component{
                 
                   <div onClick={this.handleLike}>
                     <div>
-                    <i className={`fa-solid fa-heart ${ this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId) ? "liked" : "unliked"}`} id="like-button"></i>
+                    <i className={`fa-solid fa-thumbs-up addition ${ this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId) ? "liked" : "unliked"}`} id="like-button"></i>
                     {/* <span class="material-symbols-outlined" id="like-circle">circle</span> */}
                     <i className="fa-solid fa-circle" id="like-circle"></i>
                     </div>

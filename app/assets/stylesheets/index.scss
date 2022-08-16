@@ -220,6 +220,8 @@ background-position: 0px -220px;
     margin-left: 200px;
 }
 
+
+
 #like-button{
     display: flex;
     position: sticky;
@@ -228,12 +230,12 @@ background-position: 0px -220px;
     // position: fixed;
     // padding-bottom: 200px;
    
-    margin-top: -207px;
+    margin-top: -205px;
     margin-left: 230px;
     // margin-right: 200px;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 28px;
     // border: 5px black solid;
     padding-top: 1px;
     padding-right: 1px;
@@ -251,12 +253,12 @@ background-position: 0px -220px;
     // right: 0;
     // left: 0;
 }
-#like-button:hover{
-    color: #6627CC;
-}
+// #like-button:hover{
+//     // color: #6627CC;
+// }
 
 .liked{
-    color: #6627CC;
+    color:#1454f684;
 }
 
 .unliked{

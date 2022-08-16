@@ -31,9 +31,7 @@ const Greeting = ({ currentUser, logout }) => {
         
             <div  id="favorite-box">
                 <Link to={`/users/${currentUser.id}/likes`}>
-                    <span className="material-symbols-outlined" id="like-sign">
-                        favorite
-                    </span>
+                <i className="fa-solid fa-thumbs-up" id="like-sign"></i>
                     <div className="nav-text">Likes</div>
                 </Link>
             </div>
