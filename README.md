@@ -1,5 +1,7 @@
 # ensombrite
 
+![](https://active-storage-ensombryte-dev.s3.us-west-1.amazonaws.com/intro-insombrite_AdobeExpress.gif)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
