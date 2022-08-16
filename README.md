@@ -1,8 +1,12 @@
 # ensombrite
 
 <img src="https://github.com/Alecchoy/ensombrite/blob/main/app/assets/images/ensom1.gif" width="100%" />
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
+Ensombrite is a full-stack clone of Evenbrite. Similar to its duplicate, it allows users to create, manage, events, register, and like events.
+
+## Technologies
+
+Backend:
 
 Things you may want to cover:
 
