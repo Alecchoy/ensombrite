@@ -80,11 +80,11 @@ class LoginForm extends React.Component {
                             <input className="login-button-input" type="submit" value={this.props.formType} />
                         </label>
                         <br />
-                        _____________________________________________
+                        __________________________________________________
                         <br />
                         <br />
-                        <div className="login-input-label">
-                            <button onClick={e => this.demologin(e)} className="login-input">Demo User</button>
+                        <div className="login-input-label demoro">
+                            <button onClick={e => this.demologin(e)} className="demo-boot">demo user</button>
                         </div>
                         {this.renderErrors()}
                             <div className="signup-from-login">

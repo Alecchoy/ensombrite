@@ -11,7 +11,7 @@
 }
 
 .index-nav-bar-list {
-    width: 1425px;
+    // width: 1425px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,6 @@
 .header-link {
     display: flex;
     justify-content: flex-start;
-    border: 1px black solid;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -50,10 +49,12 @@
 
 .login-signup{
     // width: 69.44px;
-    position: absolute;
+    // position: absolute;
     // position: absolute;   
     display: flex;
-    margin-left: -250px;
+    font-family: 'Roboto', sans-serif;
+    color: #39364f;
+    // margin-left: -300px;
     // z-index: 4;
 
     // justify-content: space-between;
@@ -61,16 +62,20 @@
     
 }
 
+
 .login-signup-buttons {
     // height: 49px;
     height: 70px;
     display: flex;
     align-content: flex-start;
     justify-content: flex-start;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 95px;
-    border: 1px black solid;
+    padding-left: 40px;
+    
+    padding-right: 40px;
+    // width: 95px;
+    color: #666478;
+    font-family: 'Roboto', sans-serif;
+    // border: 1px black solid;
     justify-content: center;
     align-items: center;
     // top: 10px;
@@ -80,14 +85,32 @@
  
 }
 .login-signup-buttons:hover {
-    background-color: rgba(234, 222, 222, 0.418);
+    background-color:#9db8ee63;
 
+}
+
+.demoro{
+    background-color:rgba(203, 211, 243, 0.211) ;
+}
+
+
+
+.demoro:hover{
+    // color: rgb(159, 166, 193)
+    background-color:rgba(203, 211, 243, 0.441);
+}
+
+
+.demo-boot{
+    color: rgb(112, 116, 134)
 }
 
 .header-group{
     display:flex;
+    justify-content: flex-end;
     flex-direction: row;
     font-family: 'Roboto', sans-serif;
+    // border: 1px black solid;
     // justify-content: space-evenly;
     // align-content: space-between;
 }
@@ -117,6 +140,8 @@
     position: relative;
     display: flex;
     height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .dropdown-content {

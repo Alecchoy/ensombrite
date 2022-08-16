@@ -6,10 +6,10 @@ const Greeting = ({ currentUser, logout }) => {
         <div className="login-signup">
              {/* <Link to={`/users/${this.props.session.id}/events`}>User Events</Link> */}
             <div className="login-signup-buttons">
-                <Link to="/login">Log In</Link>
+                <Link to="/login">log in</Link>
             </div>
             <div className="login-signup-buttons">
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/signup">sign up</Link>
             </div>
             
         </div>
