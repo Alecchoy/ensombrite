@@ -41,6 +41,7 @@ Image Hosting: Active Storage and AWS S3
 - Liked events will have a separate index where you can manage the events you have saved.
 ### Filter by Category
 - Users can sort through the index of events by category using the categories tab.
+<img src="https://github.com/Alecchoy/ensombrite/blob/main/app/assets/images/category.gif" />
 
 
 
