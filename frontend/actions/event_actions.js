@@ -60,7 +60,7 @@ export const updateEvent = event => dispatch => {
 }
 
 export const deleteEvent = (eventId) => dispatch => {
-    EventAPIUtil.deleteEvent(eventId).then((event) => {console.log('event!!!', event);  dispatch(removeEvent(event.id));})
+    EventAPIUtil.deleteEvent(eventId).then((event) => {dispatch(removeEvent(event.id))})
 }
 
 export const fetchCreatedEvents = userId => dispatch => {

@@ -4,7 +4,6 @@ import HomePageNavBar from "./homepage_nav_bar";
 
 
 const mSTP = (state) => {
-    console.log('nav bar', state)
     return{
         event: ["chicken test mSTp"]
     }

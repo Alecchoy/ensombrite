@@ -2,7 +2,6 @@ import { RECEIVE_EVENT, RECEIVE_EVENTS, REMOVE_EVENT } from "../actions/event_ac
 
 const eventsReducer = ( state= {}, action ) => {
     Object.freeze(state);
-    console.log("alolololction", action, action.event)
     const nextState = Object.assign({}, state);
     switch(action.type){
         case RECEIVE_EVENTS:

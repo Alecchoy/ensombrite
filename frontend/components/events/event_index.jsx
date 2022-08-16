@@ -29,7 +29,6 @@ class EventIndex extends React.Component {
 
 
     render(){
-        console.log('this.props', this.props)
         if(!this.props.like){return null}
         if(!this.props.events){return null}
         const {events} = this.props;
@@ -91,7 +90,6 @@ class EventIndex extends React.Component {
             }
             if(!filteredEvents){return null}
         
-        console.log('.',this.props.like)
         return(
             <div>
                 <HomePageNavBarContainer />

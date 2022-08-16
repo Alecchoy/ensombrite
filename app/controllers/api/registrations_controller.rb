@@ -11,7 +11,7 @@ class Api::RegistrationsController < ApplicationController
         @event = Event.find_by(id: params[:event_id])
         @host = @event.host
         if @event.attendants.include?(current_user)
-            render "api/events/show"
+            render json: @registration.errors.full_messages, status: 422
         else
             @registration = Registration.create(user_id: current_user.id, event_id: (@event.id))
             # redirect_to `api/events/#{current_user.id}/show`

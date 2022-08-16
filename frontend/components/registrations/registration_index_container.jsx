@@ -17,7 +17,6 @@ const mSTP = ({ session, entities: { users, registrations } }) => {
 
 
 const mDTP = (dispatch, ownProps) => {
-    console.log('peeepee', ownProps)
     return {
         deleteRegistration: (registrationId) => dispatch(deleteRegistration(registrationId)),
         fetchRegistrations: (userId) => dispatch(fetchRegistrations(userId))

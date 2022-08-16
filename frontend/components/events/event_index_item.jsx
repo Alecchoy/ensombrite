@@ -23,17 +23,14 @@ class EventIndexItem extends React.Component{
     handleLike(){
         // debugger
 
-        console.log("UNDEFINED FIND???", this.props.event.likes)
 
         const currentLike = this.props.event.likes.find(({user_id}) => user_id === this.props.currentUserId)
-        console.log("CURRENT LIKE ", currentLike)
         if(!currentLike){
             this.props.createLike(this.props.event.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
         
         } else {
             this.props.deleteLike(currentLike.id).then(()=> this.props.fetchEvents()).then(()=> this.props.fetchLikes())
         }
-        console.log()
         
         // this.props.fetchEvent(this.props.event.id)
 

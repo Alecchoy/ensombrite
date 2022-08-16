@@ -22,10 +22,8 @@ export const removeRegistration = (registrationId) => ({
 
 
 export const fetchRegistrations = userId => dispatch => {
-    console.log(userId, 'lol')
     return(
         RegistrationAPIUtil.fetchRegistrations(userId).then(registrations => {
-        console.log(registrations,'result')
             dispatch(receiveRegistrations(registrations))
         })
     )

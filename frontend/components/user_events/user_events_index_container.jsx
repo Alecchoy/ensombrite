@@ -3,8 +3,6 @@ import { fetchCreatedEvents, fetchEvent, deleteEvent } from "../../actions/event
 import UserCreatedEventIndex from "./user_events_index";
 
 const mSTP = ({ entities: { events, users, }, session}) => {
-    // console.log('users', users, users[session.id])
-    // console.log('lol', user)
   
     return {
         events: Object.values(events),

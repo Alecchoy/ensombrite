@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import EditEventForm from "./event_edit_form";
 
 const mSTP = (state, errors) => {
-    console.log('oatmeal', errors)
     return {
         // errors: errors.eventErrors,
         currentEventId: state.entities.events.id

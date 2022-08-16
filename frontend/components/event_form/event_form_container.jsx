@@ -4,7 +4,6 @@ import { createEvent } from '../../actions/event_actions';
 import EventForm from './event_form';
 
 const mSTP = (state, {errors} )=> {
-    console.log('state')
     return {
         currentUserId: state.session.id,
     }

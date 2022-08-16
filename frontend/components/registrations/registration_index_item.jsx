@@ -9,7 +9,7 @@ class RegistrationIndexItem extends React.Component{
     }
 
     handleClick() {
-        console.log('amazon', this.props.registrations)
+        ('amazon', this.props.registrations)
         const registrationId = this.props.registration.id
         const eventId = this.props.registration.
         this.props.history.push(`/events/${eventId}`);

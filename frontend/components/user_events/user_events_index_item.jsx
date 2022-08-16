@@ -7,21 +7,15 @@ class UserCreatedEventIndexItem extends React.Component{
         this.handleDelete = this.handleDelete.bind(this)
     }
 
-    // componentDidMount(){
-    //     this.props.fetchEvent();
-    // }
+ 
 
     handleDelete(){
-        console.log('PROPS', this.props)   
         this.props.deleteEvent(this.props.event.id)
-        // this.props.history.push(`/`)
-        // window.location.reload();
     }
 
 
 
     render(){
-        // console.log('prkkokokops', this.props)
         const { event } = this.props;
         return(
             

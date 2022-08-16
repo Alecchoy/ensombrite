@@ -24,7 +24,6 @@ class EventForm extends React.Component {
     }
 
     handleSubmit(e){
-        // console.log('state', this.state)
         e.preventDefault();
         // this.props.createEvent({event: this.state}).then(event => this.props.history.push(`/event/${event.id}`));
 
@@ -83,7 +82,6 @@ class EventForm extends React.Component {
 
 
     render(){
-        // console.log('state',state)
         const previewImg = this.state.imageUrl ? <div className="image-preview"><img src={this.state.imageUrl}/></div> : null;
         
         return(

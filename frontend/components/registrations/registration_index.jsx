@@ -8,30 +8,22 @@ import Footer from "../footer/footer";
 class RegistrationIndex extends React.Component {
     constructor(props){
         super(props)
-        // console.log('testing',this.props.fetchRegistrations(this.props.userId));
         this.handleClick = this.handleClick.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
     }
 
     componentDidMount(){
-        // console.log('registrations', registrations)
-        console.log('mounted')
        this.props.fetchRegistrations(this.props.userId)
     }
 
     handleClick(registration) {
         return () => {
-            console.log('amazon', this.props, 'lol')
-            // const registrationId = this.props.registration.id
             const eventId = registration.event_id
             this.props.history.push(`/events/${eventId}`);
 
         } 
     }
     handleDelete(registration){
-        console.log("AMOST DONE", this.props, 'LOOLOL', this.state)
-        // console.log('reginald', registration)
-        console.log("properties", this.props)
         return () => {
             this.props.deleteRegistration(registration.id)
         }
@@ -41,9 +33,7 @@ class RegistrationIndex extends React.Component {
 
     render(){
         if(!this.props.registrations){return null}
-        console.log('this.proper', this.props)
         const { registrations } = this.props;
-        console.log(registrations.length > 0, 'regi')
 
 
         let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration) => (

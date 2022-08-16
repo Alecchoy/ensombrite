@@ -13,8 +13,8 @@ class EventShow extends React.Component{
     
     componentDidMount(){
         this.props.fetchEvent()
-        console.log('this.props', this.props)
         // this.props.fetchEvent(this.props.event.id)
+        this.props.fetchRegistrations(this.props.userId)
     }
 
 
@@ -27,19 +27,17 @@ class EventShow extends React.Component{
 
     handleRegistration(){
         // this.props.fetchEvent()
-        console.log('working', this.props)
         this.props.createRegistration().then(() => this.props.fetchEvent()).then(() => this.props.fetchRegistrations(this.props.userId))
-        
-
     }
+
+    
 
   
     render(){        
         if(!this.props.event){
             return null
         }
- console.log('this.props', this.props)
- console.log('this.state', this.state)
+  
         return(
             <div>
                  <HomePageNavBarContainer />
@@ -79,7 +77,8 @@ class EventShow extends React.Component{
                         <div className="show-like">
                             .
                         </div>
-                        <div className="ticket-button" onClick={this.handleRegistration}> Buy Here
+                        <div className="ticket-button" onClick={this.handleRegistration}> 
+                        Buy Now
 
                         </div>
                     </div>
