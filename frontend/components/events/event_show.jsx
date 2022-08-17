@@ -27,17 +27,29 @@ class EventShow extends React.Component{
 
     handleRegistration(){
         // this.props.fetchEvent()
-        this.props.createRegistration().then(() => this.props.fetchEvent()).then(() => this.props.fetchRegistrations(this.props.userId))
+        console.log("STATE", this.state)
+        console.log('REGI', this.props)
+        let isRegistered = this.props.event.registrations.find(({user_id}) => user_id === this.props.userId)
+        if(!isRegistered){
+            this.props.createRegistration().then(() => this.props.fetchEvent()).then(() => this.props.fetchRegistrations(this.props.userId))
+        } else {
+            this.props.deleteRegistration(isRegistered.id).then(() => this.props.fetchEvent()).then(() => this.props.fetchRegistrations(this.props.userId))
+        }
     }
+
 
     
 
   
     render(){        
+        console.log("STATE22", this.state)
+        console.log('REGI22', this.props)
         if(!this.props.event){
             return null
         }
-  
+        if(!this.props.event.registrations){
+            return null
+        }
         return(
             <div>
                  <HomePageNavBarContainer />
@@ -75,10 +87,10 @@ class EventShow extends React.Component{
                         </div>
                     <div className="register-and-like">
                         <div className="show-like">
-                            .
+                            
                         </div>
-                        <div className="ticket-button" onClick={this.handleRegistration}> 
-                        Buy Now
+                        <div className={`ticket-button ${(this.props.event.registrations.find(({user_id}) => user_id === this.props.userId)) ? "registered" : "unregistered"}`} onClick={this.handleRegistration}> 
+                        {(!this.props.event.registrations.find(({user_id}) => user_id === this.props.userId)) ? 'Buy Ticket' : 'Registered'}
 
                         </div>
                     </div>

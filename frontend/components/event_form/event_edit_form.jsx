@@ -29,6 +29,8 @@ class EditEventForm extends React.Component {
         this.props.fetchEvent(this.props.event)
     }
 
+    
+
 
     handleSubmit(e){
         ('this.state', this.props)

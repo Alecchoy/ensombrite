@@ -4,10 +4,12 @@ import { fetchRegistrations, createRegistration, deleteRegistration } from "../.
 import EventShow from './event_show';
 
 const mSTP = ( state, ownProps) => {
+    console.log('state!!!!!',state)
     return {
         event: state.entities.events[ownProps.match.params.eventId],
         users: state.entities.users,
-        userId: state.entities.users.id
+        registrations: state.entities.registrations,
+        userId: state.session.id
 
         
     }

@@ -29,7 +29,8 @@
     padding: 5px;
 }
 
-.cat-list:focus{
+.cat-list:hover{
+    cursor: pointer;
 }
 
 .active-one{
@@ -69,6 +70,7 @@
 }
 .event-index-item:hover{
     box-shadow: 0 0 11px #66c4ff;
+    cursor: pointer;
 }
 
 .index-item-image {

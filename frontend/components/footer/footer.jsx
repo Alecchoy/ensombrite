@@ -13,22 +13,22 @@ class Footer extends React.Component{
             <div className="footer">
                 <div className="superpowers">
                     <div className="github-footer ider">
-                        <a href="">Portfolio</a>
+                        <a href="https://alecchoy.github.io/" target="_blank">Portfolio</a>
                     </div>
                     <div className="linkedin-footer ider">
-                        <a href="">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/alec-choy-387aab13b/" target="_blank">LinkedIn</a>
                     </div>
                     <div className="github-footer ider">
-                        <a href="">GitHub</a>
+                        <a href="https://github.com/Alecchoy" target="_blank">GitHub</a>
                     </div>
                     <div className="github-footer ider">
-                        <a href="">AngelList</a>
+                        <a href="https://angel.co/u/alec-choy" target="_blank">AngelList</a>
                     </div>
                     <div className="github-footer ider">
-                        <a href="">MERN Project</a>
+                        <a href="https://meal-in.herokuapp.com/#/" target="_blank">MERN Project</a>
                     </div>
                     <div className="github-footer ider">
-                        <a href="">Javascript Project</a>
+                        <a href="https://alecchoy.github.io/LittleFighterz/" target="_blank">Javascript Project</a>
                     </div>
                 </div>
                

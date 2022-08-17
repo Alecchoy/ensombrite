@@ -19,6 +19,7 @@
 
 .regi-bar:hover {
     box-shadow: 0 0 20px #c7cfdd;
+    cursor: pointer;
 }
 
 .ticket-title{
@@ -64,6 +65,7 @@
     justify-content: center;
     align-items: center;
     margin-left: 70px;
+    padding: 10px;
     // margin-top: -20px;
     // width: 50px;
 }
@@ -71,6 +73,7 @@
 .delete-iconss{
     font-size: 20px;
     color: red;
+    z-index: 99;
     // margin-top: 50p
 }
 

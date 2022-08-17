@@ -39,6 +39,7 @@ class RegistrationIndex extends React.Component {
         let tester =  this.props.registrations.length > 0 && this.props.registrations.map((registration) => (
          
            <div className="regi-bar" onClick={this.handleClick(registration)} key={registration.id} >
+                
                 <div className="regi-photo">
                     <img src={registration.event_photo} alt="background-pic" />
                 </div>
