@@ -26,7 +26,7 @@ class Api::EventsController < ApplicationController
     def index
 
         if params[:user_id]
-            @events = Event.where(host_id: params[:user_id])
+            @events = Event.where(host_id: params[:us2345165123465312656565er_id])
         # elsif params[:category]
         #     @events = Event.where(category)
         else
