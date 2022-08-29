@@ -13,7 +13,6 @@ class EventShow extends React.Component{
     
     componentDidMount(){
         this.props.fetchEvent()
-        // this.props.fetchEvent(this.props.event.id)
         this.props.fetchRegistrations(this.props.userId)
     }
 
@@ -21,12 +20,10 @@ class EventShow extends React.Component{
 
     handleDelete(){
         this.props.deleteEvent()
-        // .then(() => (this.props.history.push('/')))
         this.props.history.push(`/`)
     }
 
     handleRegistration(){
-        // this.props.fetchEvent()
         console.log("STATE", this.state)
         console.log('REGI', this.props)
         let isRegistered = this.props.event.registrations.find(({user_id}) => user_id === this.props.userId)
@@ -82,7 +79,6 @@ class EventShow extends React.Component{
                                 </div>
                                 <br />
                                 
-                                {/* {this.props.users[host_id].fname} */}
                             </div> 
                         </div>
                     <div className="register-and-like">
@@ -152,12 +148,7 @@ class EventShow extends React.Component{
                     </div>
 
                 </div>
-                {/* <Link to={`/events/${this.props.event.id}/edit`}> Edit</Link> */}
-                
-                {/* <button onClick={() => this.handleDelete()}>DELETE
-
-                {/* <img src={this.props.event.photo}/> */}
-                {/* <Footer /> */}
+              
             </div>
         )
        

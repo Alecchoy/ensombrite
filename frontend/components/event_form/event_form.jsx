@@ -25,7 +25,6 @@ class EventForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        // this.props.createEvent({event: this.state}).then(event => this.props.history.push(`/event/${event.id}`));
 
         const formData = new FormData();
 

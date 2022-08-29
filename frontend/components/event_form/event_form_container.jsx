@@ -13,7 +13,6 @@ const mSTP = (state, {errors} )=> {
 const mDTP = dispatch => {
     return {
         action: formData => dispatch(createEvent(formData))
-        // createEvent: (event) => dispatch(createEvent(event))
     }
 
 }

@@ -11,9 +11,6 @@ class EventIndexItem extends React.Component{
        
     }
 
-    // componentDidMount(){
-    //     this.props.fetchEvent(this.props.event.id)
-    // }
 
     handleClick() {
         const eventId = this.props.event.id

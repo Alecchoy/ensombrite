@@ -23,7 +23,6 @@ const mDTP = (dispatch, ownProps) => {
         fetchEvent: (eventId) => dispatch(fetchEvent(eventId)),
         deleteLike: (likeId) => dispatch(deleteLike(likeId))
     }
-    // createLike: ()
     
 }
 
