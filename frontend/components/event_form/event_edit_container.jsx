@@ -4,7 +4,6 @@ import EditEventForm from "./event_edit_form";
 
 const mSTP = (state, errors) => {
     return {
-        // errors: errors.eventErrors,
         currentEventId: state.entities.events.id
         
     }
@@ -15,7 +14,6 @@ const mDTP = (dispatch, ownProps) => {
         fetchEvent: () => dispatch(fetchEvent(ownProps.match.params.eventId)),
         removeEventErrors: () => dispatch(removeEventErrors())
         
-        // updateEvent: (event) => dispatch(updateEvent(event))
     }
 }
 
