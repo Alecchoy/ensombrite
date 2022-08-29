@@ -7,7 +7,6 @@
         json.event_description event.description
         json.event_start_date event.start_date
         json.event_start_time event.start_time
-        # json.event_photo event.photo
         if event.photo.attached?
             json.event_photo url_for(event.photo)
         end
