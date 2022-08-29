@@ -26,20 +26,19 @@ class Api::EventsController < ApplicationController
     def index
 
         if params[:user_id]
-            @events = Event.where(host_id: params[:us2345165123465312656565er_id])
-        # elsif params[:category]
-        #     @events = Event.where(category)
+            @events = Event.where(host_id: params[:user_id])
+  
         else
             @events = Event.all 
         end 
-        # @events = Event.all
+
         render :index
     end
 
 
     def update 
         @event = Event.find(params[:id])
-        # @event.host_id = current_user.id
+
         @host = @event.host
         if @event.update(event_params)
             render :show
