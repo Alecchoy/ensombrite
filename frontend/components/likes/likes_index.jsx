@@ -35,11 +35,10 @@ class LikeIndex extends React.Component{
 
         let tester= this.props.likes.length > 0 && this.props.likes.map((like) => (
              <div className="regi-bar" onClick={this.handleClick(like)} key={like.id} >
-                {/* <h1>hi</h1> */}
+
                  
               
                
-                {/* { new Date(like.start_date).toDateString()},&nbsp;{this.props.event.start_time.slice(11,16)} */}
                 
                 <div className="regi-photo">
                     <img src={like.event_photo} alt="background-pic" />
