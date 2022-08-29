@@ -12,7 +12,6 @@ class Api::LikesController < ApplicationController
             render "api/events/show"
         else
             @like = Like.create(user_id: current_user.id, event_id: (@event.id))
-            # redirect_to `api/events/#{current_user.id}/show`
             render "api/events/show"
         end
     end

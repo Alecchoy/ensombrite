@@ -14,7 +14,6 @@ class Api::RegistrationsController < ApplicationController
             render json: @registration.errors.full_messages, status: 422
         else
             @registration = Registration.create(user_id: current_user.id, event_id: (@event.id))
-            # redirect_to `api/events/#{current_user.id}/show`
             render "api/events/show"
         end
     end
