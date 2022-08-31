@@ -53,7 +53,6 @@ class SignupForm extends React.Component {
                         Sign up
                     </div>
             <br />
-            {/* Please { this.props.formType} or  */}
             <div className="signup-form">
                 <br />
                 <label className="login-input-label">

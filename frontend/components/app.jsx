@@ -17,18 +17,8 @@ import LikesIndexContainer from "./likes/likes_index_container";
 const App = () => (
     <div>
         <header>
-            {/* <HomePageNavBarContainer /> */}
             
-         {/* <EventFormContainer /> */}
         </header>
-         {/* <GreetingContainer /> */}
-        {/* <Link to="/events/new" className="event-form-link">New Event</Link> */}
-        {/* <Link to={`/users/${this.props.user.id}/events`}>User Events</Link> */}
-        {/* <div> */}
-            {/* <button> */}
-            {/* <Route exact path="/" component={EventFormContainer} /> */}
-            {/* </button> */}
-        {/* </div> */}
  
     <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />

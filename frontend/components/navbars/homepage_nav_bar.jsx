@@ -15,10 +15,6 @@ class HomePageNavBar extends React.Component{
                     <div>
                         <li><Link to="/"><div className="logo">ensombrite</div></Link></li>
                     </div>
-                     {/* <Link to={`/users/${this.props.entities.users.id}/events`}>User Events</Link> */}
-                    {/* <li><a href="news.asp">News</a></li>
-                    <li><a href="contact.asp">Contact</a></li>
-                    <li><a href="about.asp">About</a></li> */}
                     <li><GreetingContainer /></li>
                 </ul>
             </div>

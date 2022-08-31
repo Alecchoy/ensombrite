@@ -1,8 +1,6 @@
 import React from "react";
-// import { fetchRegistrations } from "../../actions/registration_actions";
 import HomePageNavBarContainer from "../navbars/homepage_nav_bar_container";
 import Footer from "../footer/footer";
-// import RegistrationIndexItem from "./registration_index_item";
 
 
 class RegistrationIndex extends React.Component {
@@ -67,7 +65,6 @@ class RegistrationIndex extends React.Component {
                 <div className="regi-container">
                 {tester}
                 </div>
-                {/* <Footer /> */}
             </div>
             <footer>
                 <Footer />

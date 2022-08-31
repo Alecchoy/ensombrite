@@ -42,7 +42,6 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-form-box">
             Welcome to Insombryte!
             <br />
-            {/* Please { this.props.formType} or  */}
             <div className="login-form">
                 <br />
                 <label className="login-input-label">Email:
