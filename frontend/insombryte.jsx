@@ -33,5 +33,4 @@ document.addEventListener("DOMContentLoaded", () => {
    
  
     ReactDOM.render(<Root store={store}/>, root)
-      // ReactDOM.render( <h1>Its working</h1>, root)
 })

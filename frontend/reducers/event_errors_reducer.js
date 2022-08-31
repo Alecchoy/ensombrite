@@ -2,23 +2,7 @@
 
 import { RECEIVE_EVENT_ERRORS, REMOVE_EVENT_ERRORS } from "../actions/event_actions";
 
-// const sessionErrorsReducer = ( state = [], action) => {
-//     Object.freeze(state);
 
-
-//     switch (action.type) {
-//         case RECEIVE_ERRORS:
-//             return action.errors;
-//         case RECEIVE_CURRENT_USER:
-//             return [];
-//         case REMOVE_SESSION_ERRORS:
-//             return [];
-//         default:
-//             return state;
-//     }
-// }
-
-// export default sessionErrorsReducer;
 
 const eventErrorsReducer = ( state = [], action) => {
     Object.freeze(state);
