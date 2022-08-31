@@ -35,29 +35,18 @@ class LikeIndex extends React.Component{
 
         let tester= this.props.likes.length > 0 && this.props.likes.map((like) => (
              <div className="regi-bar" onClick={this.handleClick(like)} key={like.id} >
-
-                 
-              
-               
-                
                 <div className="regi-photo">
                     <img src={like.event_photo} alt="background-pic" />
                 </div>
                 <div className="regi-description-box">
                     <div className="attending">Liked</div>
                     <div className="attending-title"> {like.event_title}</div>
-              
-                       
                         <div> {new Date(like.event_start_date).toDateString()}</div>
                         <div>{like.event_start_time.slice(11,16)}</div>
-                
-
                 </div>
                 <div className="deletion">
                 <button onClick={this.handleDelete(like)} key={like.id}><i className="fa-solid fa-ban delete-iconss"></i></button>
-
                 </div>
-                
             </div>
         ))
 
@@ -75,12 +64,9 @@ class LikeIndex extends React.Component{
                 <footer>
                  <Footer />
                 </footer>
-                {/* <Footer /> */}
             </div>
         )
     }
-
-
 }
 
 export default LikeIndex

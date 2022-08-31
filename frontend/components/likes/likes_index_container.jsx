@@ -9,7 +9,7 @@ const mSTP = ({ session, entities: {likes}}) => {
     }
 }
 
-const mDTP = (dispatch, ownProps) => {
+const mDTP = (dispatch) => {
     return {
         deleteLike: (likeId) => dispatch(deleteLike(likeId)),
         fetchLikes: (userId) => dispatch(fetchLikes(userId))
