@@ -93,21 +93,24 @@ class EventIndex extends React.Component {
         return(
             <div>
                 <HomePageNavBarContainer />
-            <div className="index-image">
-               
-            <div className="title-display"> 
-                        <p id="each-word" className="the-the">THE</p>
-                        <p id="each-word" className="moment-moment">MOMENT</p>
-                        <p id="each-word" className="has-has">HAS</p>
-                        <p id="each-word" className="come-come">COME</p>
-                        <p id="each-word" className="exclaim">!</p>
-                        <p id="each-word" className="dash">-</p>
-                        <p id="each-word" className="dash2">-</p>
+                
+                    <div className="index-image">
+                    
+                    <div className="title-display"> 
+                                <p id="each-word" className="the-the">THE</p>
+                                <p id="each-word" className="moment-moment">MOMENT</p>
+                                <p id="each-word" className="has-has">HAS</p>
+                                <p id="each-word" className="come-come">COME</p>
+                                <p id="each-word" className="exclaim">!</p>
+                                <p id="each-word" className="dash">-</p>
+                                <p id="each-word" className="dash2">-</p>
 
-            </div>
-            <p><Link to={'/events/new'}><div className="picture-button"> Create an Event </div></Link></p>
-                 
-            </div>
+                    <p><Link to={'/events/new'}><div className="picture-button"> Create an Event </div></Link></p>
+                    </div>
+                        
+                    </div>
+
+
             <section className="popular">
                     <div className="categories">
                        <div className="pop">Popular in </div>
@@ -128,7 +131,7 @@ class EventIndex extends React.Component {
                     {categories}
                 </ul>
             </div>
-               
+               <div className="all-events-container">
                 <div className="all-events">
               
                     {filteredEvents.map(event => (
@@ -146,6 +149,8 @@ class EventIndex extends React.Component {
                     ))}
 
                 </div>
+
+               </div>
                 <Footer />
             </div>
         )

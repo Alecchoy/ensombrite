@@ -116,8 +116,9 @@ class EventForm extends React.Component {
                     <input type="text" value={this.state.location} placeholder="location" onChange={this.update("location")}  id="location-box" className="fill-out-event-form"/>
                 </div>
                 <br />
+                <div className="event-form-location">
+                    <div className="basic-date" id="basic-title">Date and Time</div>
 
-                <div className="event-location-big" id="basic-title">Date and Time</div>
                 <div className="how-to-date">Tell event-goers when your event starts and ends so they can make plans to attend. </div>
                 <div className="event-form-dates-boxes">
                     <div className="event-form-datetime-box">
@@ -138,22 +139,25 @@ class EventForm extends React.Component {
                         </div>
                     </div>
                 </div>
+                </div>
            
+                <div className="event-form-location">
+                    <div className="event-form-photo">
+                        <div className="image-big">Main Event Image</div>
+                        <div className="how-to-image">This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</div>
+                        <div className="img-preview">
+                                <div className="insert-here">[insert image here] </div>
+                                <div className="actual-preview"> 
+                                    {previewImg}
+                                    </div>
+                            
+                        </div>
+                        <br />
+                        <div>
+                        <input type="file" onChange={this.handleFile.bind(this)}/>
+                        </div>
+                    </div>
 
-                <div className="event-form-photo">
-                    <div className="image-big">Main Event Image</div>
-                    <div className="how-to-image">This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</div>
-                    <div className="img-preview">
-                            <div className="insert-here">[insert image here] </div>
-                            <div className="actual-preview"> 
-                                {previewImg}
-                                </div>
-                        
-                    </div>
-                    <br />
-                    <div>
-                    <input type="file" onChange={this.handleFile.bind(this)}/>
-                    </div>
                 </div>
                 <br />
                 <div className="button-holder"> 

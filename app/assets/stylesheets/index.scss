@@ -1,11 +1,26 @@
 .all-events {
     display: flex;
-    justify-content: flex-start;
-    padding: 50px;
+    // justify-content: center;
+    padding-left: 4%;
+    // padding-right: 1%;
     flex-wrap: wrap;
+    // width: 900px;
+    // float: left;
+    // align-items: flex-
     // padding-left: 80px;
+    // justify
 
     
+}
+
+.all-events-container{
+    display: flex;
+    // padding-left: 5%;
+    // padding-right: 5%;
+}
+
+.allevents:nth-child(3){
+    background:yellow;
 }
 .category-list-container{
     // border: 1px black solid;
@@ -92,10 +107,10 @@
 }
 
 .index-image{
-    width: 2005px;
+    width: 100%;
     height: 576.52px;
     // border: blue 1px solid;
-    justify-content: center;
+    // justify-content: center;
     display: flex;
     // background-color: aquamarine;
     background: url("concert-performance.jpeg");
@@ -341,7 +356,7 @@ background-position: 0px -220px;
     // border: 3px white solid;
     z-index: 99px;
     display: flex;
-    position: absolute;
+    // position: absolute;
     color: white;
     font-size: 70px;
     margin-right: 1400px;
@@ -399,7 +414,7 @@ background-position: 0px -220px;
 
 .picture-button{
     display: flex;
-    position: absolute;
+    // position: absolute;
     font-size: 13px;
     color: white;
     width: 165px;
@@ -409,7 +424,7 @@ background-position: 0px -220px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     border-radius: 3px;
-    margin-left: -900px;
+    margin-left: 100px;
     margin-top: 400px;
     box-shadow: #39364f;
     
