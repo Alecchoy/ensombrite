@@ -132,7 +132,7 @@ background-position: 0px -220px;
 .displayed-events{
     display: flex;
     justify-content: center;
-    margin-top: 210px;
+    margin-top: 40px;
     font-family: 'Roboto', sans-serif;
     min-height: 620px;
     
@@ -471,16 +471,24 @@ background-position: 0px -220px;
     border-color: rgb(220, 0, 0);
 }
 
+.users-users-title{
+    display: flex;
+    width: 100%;
+    // display: flex;
+    justify-content: center;
+}
 .title-box{
     display: flex;
-    position: absolute;
-    width: 1272px;
+    justify-content: center;
+    // justify-content: flex-start;
+    // position: absolute;
+    width: 1282px;
     height: 44px;
     border: 1px solid #9899a179;
     box-shadow: 0 0 5px #d4d8df;
     background:#1454f6;
     margin-top: 150px;
-    margin-left: 91px;
+    margin-left: 22px;
     border-radius: 3px;
     
 

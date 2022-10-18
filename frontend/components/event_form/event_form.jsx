@@ -160,18 +160,18 @@ class EventForm extends React.Component {
 
                 </div>
                 <br />
-                <div className="button-holder"> 
-                <div className="description-section">
-                    <div className="description-titler">Description</div>
-                    <div className="how-to-describe">
-                    Add more details to your event like your schedule, sponsors, or featured guests.
+                <div className="event-form-location"> 
+                    <div className="description-section">
+                        <div className="description-titler">Description</div>
+                        <div className="how-to-describe">
+                        Add more details to your event like your schedule, sponsors, or featured guests.
+                        </div>
+                        <div className="event-form-description">
+                            <textarea type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} className="fill-out-event-form-2" />
+                        </div>    
                     </div>
-                    <div className="event-form-description">
-                        <textarea type="text" value={this.state.description} placeholder="description" onChange={this.update("description")} className="fill-out-event-form-2" />
-                    </div>    
-                </div>
-                
                     <button  className="submit-form">Save</button>
+                
                 </div>
             </form>
            

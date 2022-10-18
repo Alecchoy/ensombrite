@@ -242,8 +242,9 @@ event-form-dates{
 .description-section{
     display: flex;
     position: absolute;
-    margin-top: 500px;
-    padding-bottom: 150px;
+    margin-top: -50px;
+    // padding-bottom: 150px;
+    margin-left: -890px;
 }
 
 
@@ -290,10 +291,10 @@ event-form-dates{
 .submit-form{
     display: flex;
     position: absolute;
-    margin-left: 1250px;
+    margin-left: 550px;
     // border: 1px black solid;
     border-radius: 3px;
-    margin-top: 1050px;
+    margin-top: 450px;
     width: 95.7px;
     height: 44px;
     justify-content: center;
@@ -330,7 +331,7 @@ event-form-dates{
     position: absolute;
     justify-content: flex-end;
    margin-top: 1834px;
-    width: 1440px;
+    width: 100%;
     z-index: 2;
     background: #eeedf2;
     border: .5px solid#eeedf2;
